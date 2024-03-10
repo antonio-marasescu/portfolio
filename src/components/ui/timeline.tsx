@@ -17,10 +17,10 @@ function TimelineEvent({ title, subEvents }: TimelineEventProps) {
         period,
         description
     }: TimelineSubEventProps) => (
-        <div id={id} className="flex flex-row items-center pt-2">
-            <div className="flex flex-row justify-center items-center gap-6">
+        <div id={id} className="flex flex-row pt-2">
+            <div className="flex flex-row gap-6">
                 <div>
-                    <div className="text-xl text-neutral-700 font-bold">
+                    <div className="text-base md:text-xl text-neutral-700 font-bold">
                         {title}
                     </div>
                     <div className="text-xs text-muted-foreground">
@@ -34,20 +34,24 @@ function TimelineEvent({ title, subEvents }: TimelineEventProps) {
         </div>
     );
 
-    return (
-        <div className="pt-4">
-            <div className="flex flex-col flex-wrap gap-3">
-                <div className="flex flex-row gap-6 items-center bg-neutral-900 rounded">
-                    <div className="text-neutral-200 text-lg font-bold cursor-pointer m-2">
-                        {title}
-                    </div>
+    const TimelineTitle = ({ timelineTitle }: { timelineTitle: string }) =>
+        timelineTitle ? (
+            <div className="flex flex-row gap-6 bg-neutral-900 rounded  w-fit">
+                <div className="text-neutral-200 text-lg font-bold cursor-pointer ml-6 mr-6 mt-2 mb-2">
+                    {title}
                 </div>
+            </div>
+        ) : (
+            <div></div>
+        );
 
-                <div className="ml-4 mr-4">
-                    {subEvents.map(subEvent => (
-                        <TimelineSubEvent {...subEvent} key={subEvent.id} />
-                    ))}
-                </div>
+    return (
+        <div className="flex flex-col flex-wrap gap-3">
+            <TimelineTitle timelineTitle={title} />
+            <div className="mr-4">
+                {subEvents.map(subEvent => (
+                    <TimelineSubEvent {...subEvent} key={subEvent.id} />
+                ))}
             </div>
         </div>
     );
@@ -60,8 +64,10 @@ export interface TimelineProps {
 export function Timeline({ events }: TimelineProps) {
     return (
         <div className="flex flex-col">
-            {events.map(event => (
-                <TimelineEvent {...event} key={event.id} />
+            {events.map((event, index) => (
+                <div key={event.id} className={index > 0 ? 'pt-4' : ''}>
+                    <TimelineEvent {...event} />
+                </div>
             ))}
         </div>
     );

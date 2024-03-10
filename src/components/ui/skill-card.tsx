@@ -43,7 +43,7 @@ export function SkillCard({ title, skills }: SkillCardProps) {
                 </CardTitle>
             </CardHeader>
             <CardContent>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-2 gap-y-6 justify-items-center">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-6 justify-items-center">
                     {skills.map(skill => (
                         <SkillData {...skill} key={skill.name} />
                     ))}
