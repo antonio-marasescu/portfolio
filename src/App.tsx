@@ -1,11 +1,16 @@
 import './App.css';
-import { Button } from '@/components/ui/button.tsx';
+import { AppLayout } from '@/components/layouts/app-layout.tsx';
+import { NameSection } from '@/components/sections/name-section.tsx';
+import { AboutSection } from '@/components/sections/about-section.tsx';
+import { WorkHistorySection } from '@/components/sections/work-history-section.tsx';
 
 function App() {
     return (
-        <>
-            <Button>Click me</Button>
-        </>
+        <AppLayout>
+            <NameSection />
+            <AboutSection />
+            <WorkHistorySection />
+        </AppLayout>
     );
 }
 
