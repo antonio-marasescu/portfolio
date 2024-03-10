@@ -10,8 +10,9 @@ import {
     TooltipProvider,
     TooltipTrigger
 } from '@/components/ui/tooltip.tsx';
+import { cn } from '@/lib/utils.ts';
 
-export type Skill = { name: string; url: string };
+export type Skill = { name: string; url: string; flagged: boolean };
 export interface SkillCardProps {
     title: string;
     skills: Skill[];
@@ -24,7 +25,12 @@ export function SkillCard({ title, skills }: SkillCardProps) {
                 <TooltipTrigger asChild>
                     <img
                         src={skill.url}
-                        className="w-12 h-12 max-w-12 max-h-12 cursor-pointer bg-white rounded-lg shadow-sm shadow-neutral-400 p-1"
+                        className={cn(
+                            'w-12 h-12 max-w-12 max-h-12 cursor-pointer bg-white rounded-lg shadow-sm shadow-neutral-400 p-1',
+                            skill.flagged
+                                ? 'border-2 border-primary  transform transition duration-500 scale-125'
+                                : ''
+                        )}
                         alt={skill.name}
                     />
                 </TooltipTrigger>
