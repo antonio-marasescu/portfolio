@@ -24,7 +24,7 @@ export function SkillCard({ title, skills }: SkillCardProps) {
                 <TooltipTrigger asChild>
                     <img
                         src={skill.url}
-                        className="w-12 h-12 max-w-12 max-h-12 cursor-pointer bg-neutral-200 p-1"
+                        className="w-12 h-12 max-w-12 max-h-12 cursor-pointer bg-white rounded-lg shadow-sm shadow-neutral-400 p-1"
                         alt={skill.name}
                     />
                 </TooltipTrigger>

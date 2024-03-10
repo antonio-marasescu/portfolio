@@ -11,7 +11,7 @@ export function EducationSection() {
                     id: 'education-history-001',
                     title: 'Technical University of Cluj-Napoca',
                     description:
-                        "Master's degree Information Technology in Economy",
+                        "Master's degree, Information Technology in Economy",
                     period: 'Jan 2020 - Jul 2023'
                 },
                 {

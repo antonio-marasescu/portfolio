@@ -36,7 +36,7 @@ function TimelineEvent({ title, subEvents }: TimelineEventProps) {
 
     const TimelineTitle = ({ timelineTitle }: { timelineTitle: string }) =>
         timelineTitle ? (
-            <div className="flex flex-row gap-6 bg-neutral-900 rounded  w-fit">
+            <div className="flex flex-row gap-6 bg-neutral-900 rounded w-fit drop-shadow-md shadow-muted-foreground">
                 <div className="text-neutral-200 text-lg font-bold cursor-pointer ml-6 mr-6 mt-2 mb-2">
                     {title}
                 </div>
