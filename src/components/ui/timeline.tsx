@@ -20,7 +20,7 @@ function TimelineEvent({ title, subEvents }: TimelineEventProps) {
         <div id={id} className="flex flex-row items-center pt-2">
             <div className="flex flex-row justify-center items-center gap-6">
                 <div>
-                    <div className="text-xl text-neutral-600 font-bold">
+                    <div className="text-xl text-neutral-700 font-bold">
                         {title}
                     </div>
                     <div className="text-xs text-muted-foreground">
@@ -37,7 +37,7 @@ function TimelineEvent({ title, subEvents }: TimelineEventProps) {
     return (
         <div className="pt-4">
             <div className="flex flex-col flex-wrap gap-3">
-                <div className="flex flex-row gap-6 items-center bg-neutral-700 rounded">
+                <div className="flex flex-row gap-6 items-center bg-neutral-900 rounded">
                     <div className="text-neutral-200 text-lg font-bold cursor-pointer m-2">
                         {title}
                     </div>
