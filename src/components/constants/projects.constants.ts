@@ -15,6 +15,7 @@ export const ProjectCards: ProjectCardProps[] = [
             'Spring',
             'Angular',
             'Java',
+            'JavaScript',
             'TypeScript',
             'Storybook',
             'Docker',

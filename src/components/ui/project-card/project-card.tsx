@@ -1,7 +1,6 @@
 import {
     Card,
     CardContent,
-    CardDescription,
     CardFooter,
     CardHeader,
     CardTitle
@@ -44,8 +43,8 @@ export function ProjectCard({
 }: ProjectCardProps) {
     return (
         <Card
-            className="bg-neutral-900 drop-shadow-md shadow-muted-foreground h-full cursor-pointer"
             id={id}
+            className="bg-neutral-900 drop-shadow-md shadow-muted-foreground h-full cursor-pointer"
         >
             <CardHeader>
                 <CardTitle className="text-primary-foreground cursor-pointer">
@@ -62,20 +61,18 @@ export function ProjectCard({
                         )}
                     </div>
                 </CardTitle>
-                <CardDescription>
-                    <div>
-                        <div>{date}</div>
-                        <div className="flex flex-row gap-2 pt-2">
-                            <ProjectCardBadge label={projectType} />
-                        </div>
+                <div>
+                    <div className="text-neutral-500">{date}</div>
+                    <div className="flex flex-row gap-2 pt-2">
+                        <ProjectCardBadge label={projectType} />
                     </div>
-                </CardDescription>
+                </div>
             </CardHeader>
             <Separator />
             <CardContent className="p-3 pt-0">
                 <div className="text-xs text-primary-foreground cursor-text mt-2">
-                    <p>{description}</p>
-                    <p className="pt-4">{involvement}</p>
+                    <div>{description}</div>
+                    <div className="pt-4">{involvement}</div>
                 </div>
             </CardContent>
             <Separator />

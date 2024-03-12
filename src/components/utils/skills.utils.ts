@@ -1,8 +1,5 @@
 import { SkillCardProps } from '@/components/ui/skill-card.tsx';
-
-function cleanText(text: string): string {
-    return text.toLowerCase().replace(' ', '');
-}
+import { cleanText } from '@/components/utils/text.utils.ts';
 
 export function enhanceSkillCards(
     skillCards: SkillCardProps[],

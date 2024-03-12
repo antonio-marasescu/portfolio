@@ -1,27 +1,167 @@
 import { SkillCardProps } from '@/components/ui/skill-card.tsx';
 
+export const Skills: Record<string, { name: string; url: string }> = {
+    TypeScript: {
+        name: 'TypeScript',
+        url: 'technologies/languages/typescript.png'
+    },
+    JavaScript: {
+        name: 'JavaScript',
+        url: 'technologies/languages/javascript.png'
+    },
+    Java: {
+        name: 'Java',
+        url: 'technologies/languages/java.png'
+    },
+    Solidity: {
+        name: 'Solidity',
+        url: 'technologies/languages/solidity.png'
+    },
+    Angular: {
+        name: 'Angular',
+        url: 'technologies/frontend/angular.png'
+    },
+    React: {
+        name: 'React',
+        url: 'technologies/frontend/react.png'
+    },
+    CSS: {
+        name: 'CSS',
+        url: 'technologies/frontend/css.png'
+    },
+    HTML: {
+        name: 'HTML',
+        url: 'technologies/frontend/html.png'
+    },
+    SASS: {
+        name: 'SASS',
+        url: 'technologies/frontend/sass.png'
+    },
+    Tailwind: {
+        name: 'Tailwind',
+        url: 'technologies/frontend/tailwind.png'
+    },
+    Ngrx: {
+        name: 'NGRX',
+        url: 'technologies/frontend/ngrx.svg'
+    },
+    Redux: {
+        name: 'Redux',
+        url: 'technologies/frontend/redux.png'
+    },
+    MaterialDesign: {
+        name: 'Material Design',
+        url: 'technologies/frontend/material-design.png'
+    },
+    Storybook: {
+        name: 'Storybook',
+        url: 'technologies/frontend/storybook.png'
+    },
+    NodeJS: {
+        name: 'NodeJS',
+        url: 'technologies/backend/nodejs.png'
+    },
+    SpringBoot: {
+        name: 'Spring Boot',
+        url: 'technologies/backend/spring-boot.png'
+    },
+    AwsLambda: {
+        name: 'AWS Lambda',
+        url: 'technologies/backend/aws-lambda.png'
+    },
+    ExpressJs: {
+        name: 'ExpressJs',
+        url: 'technologies/backend/express.png'
+    },
+    NestJs: {
+        name: 'NestJs',
+        url: 'technologies/backend/nestjs.svg'
+    },
+    GraphQl: {
+        name: 'GraphQL',
+        url: 'technologies/backend/graphql.png'
+    },
+    PostgreSQL: {
+        name: 'PostgreSQL',
+        url: 'technologies/backend/postgresql.png'
+    },
+    Sql: {
+        name: 'SQL',
+        url: 'technologies/backend/sql.png'
+    },
+    Dynamodb: {
+        name: 'Dynamodb',
+        url: 'technologies/backend/dynamodb.png'
+    },
+    Jpa: {
+        name: 'JPA',
+        url: 'technologies/backend/jpa.png'
+    },
+    TypeORM: {
+        name: 'TypeORM',
+        url: 'technologies/backend/typeorm.png'
+    },
+    Terraform: {
+        name: 'Terraform',
+        url: 'technologies/devops/terraform.png'
+    },
+    AwsCdk: {
+        name: 'AWS CDK',
+        url: 'technologies/devops/aws-cdk.png'
+    },
+    AwsServices: {
+        name: 'AWS Services',
+        url: 'technologies/devops/aws.png'
+    },
+    Docker: {
+        name: 'Docker',
+        url: 'technologies/devops/docker.png'
+    },
+    GithubActions: {
+        name: 'Github Actions',
+        url: 'technologies/devops/github-actions.svg'
+    },
+    Jest: {
+        name: 'Jest',
+        url: 'technologies/testing/jest.svg'
+    },
+    Cypress: {
+        name: 'Cypress',
+        url: 'technologies/testing/cypress.png'
+    },
+    Git: {
+        name: 'Git',
+        url: 'technologies/miscellaneous/git.png'
+    },
+    Nx: {
+        name: 'Nx',
+        url: 'technologies/miscellaneous/nx.jpg'
+    },
+    Esbuild: {
+        name: 'Esbuild',
+        url: 'technologies/miscellaneous/esbuild.png'
+    },
+    Ethereum: {
+        name: 'Ethereum',
+        url: 'technologies/miscellaneous/ethereum.png'
+    }
+};
+
 export const SkillCards: SkillCardProps[] = [
     {
         title: 'Languages',
         skills: [
+            { ...Skills.TypeScript, flagged: false },
             {
-                name: 'TypeScript',
-                url: 'technologies/languages/typescript.png',
+                ...Skills.JavaScript,
                 flagged: false
             },
             {
-                name: 'JavaScript',
-                url: 'technologies/languages/javascript.png',
+                ...Skills.Java,
                 flagged: false
             },
             {
-                name: 'Java',
-                url: 'technologies/languages/java.png',
-                flagged: false
-            },
-            {
-                name: 'Solidity',
-                url: 'technologies/languages/solidity.png',
+                ...Skills.Solidity,
                 flagged: false
             }
         ]
@@ -30,53 +170,43 @@ export const SkillCards: SkillCardProps[] = [
         title: 'Frontend',
         skills: [
             {
-                name: 'Angular',
-                url: 'technologies/frontend/angular.png',
+                ...Skills.Angular,
                 flagged: false
             },
             {
-                name: 'React',
-                url: 'technologies/frontend/react.png',
+                ...Skills.React,
                 flagged: false
             },
             {
-                name: 'CSS',
-                url: 'technologies/frontend/css.png',
+                ...Skills.CSS,
                 flagged: false
             },
             {
-                name: 'HTML',
-                url: 'technologies/frontend/html.png',
+                ...Skills.HTML,
                 flagged: false
             },
             {
-                name: 'SASS',
-                url: 'technologies/frontend/sass.png',
+                ...Skills.SASS,
                 flagged: false
             },
             {
-                name: 'Tailwind',
-                url: 'technologies/frontend/tailwind.png',
+                ...Skills.Tailwind,
                 flagged: false
             },
             {
-                name: 'NGRX',
-                url: 'technologies/frontend/ngrx.svg',
+                ...Skills.Ngrx,
                 flagged: false
             },
             {
-                name: 'Redux',
-                url: 'technologies/frontend/redux.png',
+                ...Skills.Redux,
                 flagged: false
             },
             {
-                name: 'Material Design',
-                url: 'technologies/frontend/material-design.png',
+                ...Skills.MaterialDesign,
                 flagged: false
             },
             {
-                name: 'Storybook',
-                url: 'technologies/frontend/storybook.png',
+                ...Skills.Storybook,
                 flagged: false
             }
         ]
@@ -85,48 +215,47 @@ export const SkillCards: SkillCardProps[] = [
         title: 'Backend',
         skills: [
             {
-                name: 'NodeJS',
-                url: 'technologies/backend/nodejs.png',
+                ...Skills.NodeJS,
                 flagged: false
             },
             {
-                name: 'Spring Boot',
-                url: 'technologies/backend/spring-boot.png',
+                ...Skills.SpringBoot,
                 flagged: false
             },
             {
-                name: 'AWS Lambda',
-                url: 'technologies/backend/aws-lambda.png',
+                ...Skills.AwsLambda,
                 flagged: false
             },
             {
-                name: 'ExpressJs',
-                url: 'technologies/backend/express.png',
+                ...Skills.ExpressJs,
                 flagged: false
             },
             {
-                name: 'NestJs',
-                url: 'technologies/backend/nestjs.svg',
+                ...Skills.NestJs,
                 flagged: false
             },
             {
-                name: 'GraphQL',
-                url: 'technologies/backend/graphql.png',
+                ...Skills.GraphQl,
                 flagged: false
             },
             {
-                name: 'PostgreSQL',
-                url: 'technologies/backend/postgresql.png',
+                ...Skills.PostgreSQL,
                 flagged: false
             },
             {
-                name: 'SQL',
-                url: 'technologies/backend/sql.png',
+                ...Skills.Sql,
                 flagged: false
             },
             {
-                name: 'Dynamodb',
-                url: 'technologies/backend/dynamodb.png',
+                ...Skills.Dynamodb,
+                flagged: false
+            },
+            {
+                ...Skills.Jpa,
+                flagged: false
+            },
+            {
+                ...Skills.TypeORM,
                 flagged: false
             }
         ]
@@ -135,28 +264,23 @@ export const SkillCards: SkillCardProps[] = [
         title: 'DevOps',
         skills: [
             {
-                name: 'Terraform',
-                url: 'technologies/devops/terraform.png',
+                ...Skills.Terraform,
                 flagged: false
             },
             {
-                name: 'AWS CDK',
-                url: 'technologies/devops/aws-cdk.png',
+                ...Skills.AwsCdk,
                 flagged: false
             },
             {
-                name: 'AWS Services',
-                url: 'technologies/devops/aws.png',
+                ...Skills.AwsServices,
                 flagged: false
             },
             {
-                name: 'Docker',
-                url: 'technologies/devops/docker.png',
+                ...Skills.Docker,
                 flagged: false
             },
             {
-                name: 'Github Actions',
-                url: 'technologies/devops/github-actions.svg',
+                ...Skills.GithubActions,
                 flagged: false
             }
         ]
@@ -165,13 +289,11 @@ export const SkillCards: SkillCardProps[] = [
         title: 'Testing',
         skills: [
             {
-                name: 'Jest',
-                url: 'technologies/testing/jest.svg',
+                ...Skills.Jest,
                 flagged: false
             },
             {
-                name: 'Cypress',
-                url: 'technologies/testing/cypress.png',
+                ...Skills.Cypress,
                 flagged: false
             }
         ]
@@ -180,23 +302,19 @@ export const SkillCards: SkillCardProps[] = [
         title: 'Miscellaneous',
         skills: [
             {
-                name: 'Git',
-                url: 'technologies/miscellaneous/git.png',
+                ...Skills.Git,
                 flagged: false
             },
             {
-                name: 'Nx',
-                url: 'technologies/miscellaneous/nx.jpg',
+                ...Skills.Nx,
                 flagged: false
             },
             {
-                name: 'Esbuild',
-                url: 'technologies/miscellaneous/esbuild.png',
+                ...Skills.Esbuild,
                 flagged: false
             },
             {
-                name: 'Ethereum',
-                url: 'technologies/miscellaneous/ethereum.png',
+                ...Skills.Ethereum,
                 flagged: false
             }
         ]

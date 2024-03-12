@@ -1,34 +1,40 @@
 import { StandardSectionLayout } from '@/components/layouts/standard-section-layout.tsx';
 import { SkillCard, SkillCardProps } from '@/components/ui/skill-card.tsx';
-import { ChangeEvent, useState } from 'react';
-import { SkillCards } from '@/components/constants/skills.constants.ts';
-import { Input } from '@/components/ui/input.tsx';
+import { useState } from 'react';
+import { SkillCards, Skills } from '@/components/constants/skills.constants.ts';
 import { enhanceSkillCards } from '@/components/utils/skills.utils.ts';
 import { Label } from '@/components/ui/label.tsx';
+import { ComboBox, ComboBoxOption } from '@/components/ui/combobox.tsx';
 
 export function SkillsSection() {
     const [filteredSkillCards, setFilterSkillCards] = useState<
         SkillCardProps[]
     >([...SkillCards]);
-    const [searchText, setSearchText] = useState<string>('');
+    const skillOptions = Object.keys(Skills).map(
+        skillKey =>
+            ({
+                value: Skills[skillKey].name,
+                label: Skills[skillKey].name
+            }) as ComboBoxOption
+    );
 
-    const onInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setSearchText(event.target.value);
+    const onInputChange = (currentValue: string) => {
         setFilterSkillCards(
-            enhanceSkillCards(filteredSkillCards, event.target.value)
+            enhanceSkillCards(filteredSkillCards, currentValue)
         );
     };
 
     return (
         <StandardSectionLayout sectionTitle="Skills">
             <div className="mb-6">
-                <Label htmlFor="skillSearch">Skill Search</Label>
-                <Input
-                    className="mt-1"
-                    placeholder="Search for a skill, e.g. React"
-                    id="skillSearch"
-                    onChange={onInputChange}
-                    value={searchText}
+                <Label htmlFor="skillSearch">Keyword Search</Label>
+                <div className="mt-1"></div>
+                <ComboBox
+                    placeholder="Search..."
+                    searchPlaceholder="Search by keyword"
+                    onSelect={onInputChange}
+                    options={skillOptions}
+                    id="skillsSearch"
                 />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 justify-center items-center gap-4">
