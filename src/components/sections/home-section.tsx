@@ -2,6 +2,7 @@ import { TypewriterEffect } from '@/components/ui/typewriter-effect.tsx';
 import { Button } from '@/components/ui/button.tsx';
 import { Linkedin } from 'lucide-react';
 import { Download } from 'lucide-react';
+import { HomeInformation } from '@/components/constants/home.constants.ts';
 
 export function HomeSection() {
     const words = [
@@ -22,7 +23,7 @@ export function HomeSection() {
             className: 'text-zinc-200 dark:text-zinc-900'
         },
         {
-            text: 'Antonio.',
+            text: `${HomeInformation.firstName}.`,
             className: 'text-violet-600 dark:text-violet-600'
         }
     ];
@@ -34,7 +35,7 @@ export function HomeSection() {
             <TypewriterEffect words={words} cursorClassName="bg-violet-600" />
             <div className="flex justify-center items-center text-center">
                 <p className="text-base md:text-xl lg:text-2xl text-muted-foreground">
-                    Full-Stack Software Engineer
+                    {HomeInformation.role}
                 </p>
             </div>
             <div className="flex flex-row flex-wrap gap-6 justify-center items-center">
