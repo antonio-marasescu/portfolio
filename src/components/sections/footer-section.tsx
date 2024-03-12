@@ -1,12 +1,19 @@
 import { GithubIcon } from 'lucide-react';
+import { navigateToExternalUrl } from '@/components/utils/navigation.utils.ts';
+import { ProfileUrls } from '@/components/constants/profile-urls.constants.ts';
 
 export function FooterSection() {
     return (
         <footer
-            id="Footer"
+            id="footer"
             className="w-full h-[100px] flex flex-col gap-2 justify-center items-center"
         >
-            <div className=" text-neutral-200 border-2 border-neutral-200 rounded-full hover:text-neutral-800 hover:bg-neutral-200 cursor-pointer">
+            <div
+                className=" text-neutral-200 border-2 border-neutral-200 rounded-full hover:text-neutral-800 hover:bg-neutral-200 cursor-pointer"
+                onClick={() =>
+                    navigateToExternalUrl(ProfileUrls.profileRepositoryUrl)
+                }
+            >
                 <GithubIcon className="h-4 w-4 m-1" />
             </div>
             <div className="flex justify-center items-center text-center">

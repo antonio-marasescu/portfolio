@@ -9,6 +9,7 @@ import { Skills } from '@/components/constants/skills.constants.ts';
 import { ComboBox, ComboBoxOption } from '@/components/ui/combobox.tsx';
 import { filterProjectCards } from '@/components/utils/projects.utils.ts';
 import { Label } from '@/components/ui/label.tsx';
+import { NavigationSections } from '@/components/constants/navigation.constants.ts';
 
 export function ProjectsSection() {
     const [projectCards, setProjectCards] = useState<ProjectCardProps[]>([
@@ -27,7 +28,10 @@ export function ProjectsSection() {
     };
 
     return (
-        <StandardSectionLayout sectionTitle="Projects">
+        <StandardSectionLayout
+            id={NavigationSections.Projects.id}
+            sectionTitle={NavigationSections.Projects.label}
+        >
             <div className="mb-6">
                 <Label htmlFor="projectsSearch">Keyword Search</Label>
                 <div className="mt-1"></div>

@@ -6,20 +6,24 @@ import {
     TooltipProvider,
     TooltipTrigger
 } from '@/components/ui/tooltip.tsx';
+import { navigateToExternalUrl } from '@/components/utils/navigation.utils.ts';
 
 export type CardIconType = 'Github' | 'Website';
 
 export interface ProjectCardIconProps {
     iconType: CardIconType;
-    url?: string;
+    url: string;
 }
 
-export function ProjectCardIcon({ iconType }: ProjectCardIconProps) {
+export function ProjectCardIcon({ iconType, url }: ProjectCardIconProps) {
     return (
         <TooltipProvider>
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <div className="bg-neutral-200 rounded-xl h-fit text-neutral-900 hover:bg-primary hover:text-neutral-200">
+                    <div
+                        className="bg-neutral-200 rounded-xl h-fit text-neutral-900 hover:bg-primary hover:text-neutral-200"
+                        onClick={() => navigateToExternalUrl(url)}
+                    >
                         {iconType === 'Github' ? (
                             <GithubIcon className="h-4 w-4 m-1 " />
                         ) : (

@@ -5,6 +5,7 @@ import { SkillCards, Skills } from '@/components/constants/skills.constants.ts';
 import { enhanceSkillCards } from '@/components/utils/skills.utils.ts';
 import { Label } from '@/components/ui/label.tsx';
 import { ComboBox, ComboBoxOption } from '@/components/ui/combobox.tsx';
+import { NavigationSections } from '@/components/constants/navigation.constants.ts';
 
 export function SkillsSection() {
     const [filteredSkillCards, setFilterSkillCards] = useState<
@@ -25,7 +26,10 @@ export function SkillsSection() {
     };
 
     return (
-        <StandardSectionLayout sectionTitle="Skills">
+        <StandardSectionLayout
+            id={NavigationSections.Skills.id}
+            sectionTitle={NavigationSections.Skills.label}
+        >
             <div className="mb-6">
                 <Label htmlFor="skillSearch">Keyword Search</Label>
                 <div className="mt-1"></div>

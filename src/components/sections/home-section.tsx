@@ -1,8 +1,9 @@
 import { TypewriterEffect } from '@/components/ui/typewriter-effect.tsx';
 import { Button } from '@/components/ui/button.tsx';
-import { Linkedin } from 'lucide-react';
-import { Download } from 'lucide-react';
+import { Download, Linkedin } from 'lucide-react';
 import { HomeInformation } from '@/components/constants/home.constants.ts';
+import { NavigationSections } from '@/components/constants/navigation.constants.ts';
+import { navigateToExternalUrl } from '@/components/utils/navigation.utils.ts';
 
 export function HomeSection() {
     const words = [
@@ -29,7 +30,7 @@ export function HomeSection() {
     ];
     return (
         <section
-            id="Home"
+            id={NavigationSections.Home.id}
             className="w-full h-full flex flex-col gap-6 justify-center items-center"
         >
             <TypewriterEffect words={words} cursorClassName="bg-violet-600" />
@@ -39,7 +40,12 @@ export function HomeSection() {
                 </p>
             </div>
             <div className="flex flex-row flex-wrap gap-6 justify-center items-center">
-                <Button variant="outline">
+                <Button
+                    variant="outline"
+                    onClick={() =>
+                        navigateToExternalUrl(HomeInformation.linkedinUrl)
+                    }
+                >
                     <Linkedin className="mr-2 h-4 w-4" />
                     Get in touch
                 </Button>

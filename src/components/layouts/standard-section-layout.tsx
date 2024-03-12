@@ -1,17 +1,19 @@
 import { ReactNode } from 'react';
 
 export interface StandardSectionLayoutProps {
+    id: string;
     sectionTitle?: string;
     children: ReactNode;
 }
 
 export function StandardSectionLayout({
     children,
-    sectionTitle
+    sectionTitle,
+    id
 }: StandardSectionLayoutProps) {
     return (
         <section
-            id={sectionTitle}
+            id={id}
             className="w-full justify-center items-center bg-neutral-200"
         >
             <div className="container pl-4 pr-4 md:pl-8 md:pr-8 lg:pl-16 lg:pr-16 pt-4 md:pt-8 lg:pt-20">

@@ -2,10 +2,15 @@ import { Button } from '@/components/ui/button.tsx';
 import { GithubIcon, LinkedinIcon } from 'lucide-react';
 import { StandardSectionLayout } from '@/components/layouts/standard-section-layout.tsx';
 import { AboutInformation } from '@/components/constants/about.constants.ts';
+import { NavigationSections } from '@/components/constants/navigation.constants.ts';
+import { navigateToExternalUrl } from '@/components/utils/navigation.utils.ts';
 
 export function AboutSection() {
     return (
-        <StandardSectionLayout sectionTitle="About Myself">
+        <StandardSectionLayout
+            id={NavigationSections.About.id}
+            sectionTitle={NavigationSections.About.label}
+        >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8  justify-items-center">
                 <div className="text-xs md:text-base text-muted-foreground col-span-2">
                     <p>{AboutInformation.description}</p>
@@ -14,6 +19,11 @@ export function AboutSection() {
                             variant="outline"
                             size="icon"
                             className="bg-neutral-900 drop-shadow-md shadow-muted-foreground text-neutral-300 hover:text-neutral-800"
+                            onClick={() =>
+                                navigateToExternalUrl(
+                                    AboutInformation.githubUrl
+                                )
+                            }
                         >
                             <GithubIcon className="h-4 w-4" />
                         </Button>
@@ -21,6 +31,11 @@ export function AboutSection() {
                             variant="outline"
                             size="icon"
                             className="bg-neutral-900 drop-shadow-md shadow-muted-foreground  text-neutral-300 hover:text-neutral-800"
+                            onClick={() =>
+                                navigateToExternalUrl(
+                                    AboutInformation.linkedinUrl
+                                )
+                            }
                         >
                             <LinkedinIcon className="h-4 w-4" />
                         </Button>
