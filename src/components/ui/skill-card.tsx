@@ -28,7 +28,7 @@ export function SkillCard({ title, skills }: SkillCardProps) {
                         className={cn(
                             'w-12 h-12 max-w-12 max-h-12 cursor-pointer bg-white rounded-lg shadow-sm shadow-neutral-400 p-1',
                             skill.flagged
-                                ? 'border-2 border-primary  transform transition duration-500 scale-125'
+                                ? 'border-2 border-primary transform transition duration-500 scale-125'
                                 : ''
                         )}
                         alt={skill.name}
@@ -42,7 +42,7 @@ export function SkillCard({ title, skills }: SkillCardProps) {
     );
 
     return (
-        <Card className="bg-neutral-900 drop-shadow-md shadow-muted-foreground h-full cursor-pointer transform transition duration-500 md:hover:scale-105 hover:shadow-2xl">
+        <Card className="bg-neutral-900 drop-shadow-md shadow-muted-foreground h-full cursor-pointer hover:shadow-xl">
             <CardHeader>
                 <CardTitle className="text-primary-foreground cursor-pointer">
                     {title}

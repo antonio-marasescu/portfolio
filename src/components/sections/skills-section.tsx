@@ -25,7 +25,7 @@ export function SkillsSection() {
                 <Label htmlFor="skillSearch">Skill Search</Label>
                 <Input
                     className="mt-1"
-                    placeholder="Search for a skill"
+                    placeholder="Search for a skill, e.g. React"
                     id="skillSearch"
                     onChange={onInputChange}
                     value={searchText}

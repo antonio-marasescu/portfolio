@@ -17,6 +17,9 @@ module.exports = {
             }
         },
         extend: {
+            fontSize: {
+                xss: '0.6rem'
+            },
             colors: {
                 border: 'hsl(var(--border))',
                 input: 'hsl(var(--input))',
