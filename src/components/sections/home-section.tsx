@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button.tsx';
 import { Linkedin } from 'lucide-react';
 import { Download } from 'lucide-react';
 
-export function NameSection() {
+export function HomeSection() {
     const words = [
         {
             text: 'Hello',
@@ -27,7 +27,10 @@ export function NameSection() {
         }
     ];
     return (
-        <div className="w-full h-full flex flex-col gap-6 justify-center items-center">
+        <section
+            id="Home"
+            className="w-full h-full flex flex-col gap-6 justify-center items-center"
+        >
             <TypewriterEffect words={words} cursorClassName="bg-violet-600" />
             <div className="flex justify-center items-center text-center">
                 <p className="text-base md:text-xl lg:text-2xl text-muted-foreground">
@@ -47,6 +50,6 @@ export function NameSection() {
             <small className="text-xs font-medium leading-none text-muted-foreground">
                 Scroll to find out more
             </small>
-        </div>
+        </section>
     );
 }

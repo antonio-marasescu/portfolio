@@ -2,7 +2,10 @@ import { GithubIcon } from 'lucide-react';
 
 export function FooterSection() {
     return (
-        <div className="w-full h-[100px] flex flex-col gap-2 justify-center items-center">
+        <footer
+            id="Footer"
+            className="w-full h-[100px] flex flex-col gap-2 justify-center items-center"
+        >
             <div className=" text-neutral-200 border-2 border-neutral-200 rounded-full hover:text-neutral-800 hover:bg-neutral-200 cursor-pointer">
                 <GithubIcon className="h-4 w-4 m-1" />
             </div>
@@ -34,6 +37,6 @@ export function FooterSection() {
                     </a>
                 </p>
             </div>
-        </div>
+        </footer>
     );
 }

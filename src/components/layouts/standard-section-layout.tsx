@@ -10,7 +10,10 @@ export function StandardSectionLayout({
     sectionTitle
 }: StandardSectionLayoutProps) {
     return (
-        <section className="w-full justify-center items-center bg-neutral-200">
+        <section
+            id={sectionTitle}
+            className="w-full justify-center items-center bg-neutral-200"
+        >
             <div className="container pl-4 pr-4 md:pl-8 md:pr-8 lg:pl-16 lg:pr-16 pt-4 md:pt-8 lg:pt-20">
                 <div className="text-lg md:text-2xl text-neutral-800 pb-2 md:pb-4 font-bold cursor-pointer">
                     <div className="flex flex-row align-text-top drop-shadow-md shadow-muted-foreground">
