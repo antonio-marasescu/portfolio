@@ -39,7 +39,7 @@ export function ProjectsSection() {
                     id="projectsSearch"
                 />
             </div>
-            <div className="justify-center items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="justify-center items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-8">
                 {projectCards.map(projectCard => (
                     <ProjectCard {...projectCard} key={projectCard.id} />
                 ))}
