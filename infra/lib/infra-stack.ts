@@ -1,8 +1,9 @@
-import { RemovalPolicy, Stack, StackProps, Tags } from 'aws-cdk-lib';
+import { RemovalPolicy, Stack, Tags } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { Bucket } from 'aws-cdk-lib/aws-s3';
 import {
     ApplicationName,
+    CloudfrontDistributionCertificateId,
     CloudfrontDistributionId,
     EnvironmentTag,
     OriginAccessIdentityId,
@@ -10,11 +11,17 @@ import {
     TenantEnvironment,
     WebsiteBucketId
 } from './infra-constants';
-import { Distribution, OriginAccessIdentity } from 'aws-cdk-lib/aws-cloudfront';
+import {
+    Distribution,
+    OriginAccessIdentity,
+    ViewerProtocolPolicy
+} from 'aws-cdk-lib/aws-cloudfront';
 import { S3Origin } from 'aws-cdk-lib/aws-cloudfront-origins';
+import { Certificate } from 'aws-cdk-lib/aws-certificatemanager';
+import { InfrastructureStackProps } from './infra.types';
 
 export class InfraStack extends Stack {
-    constructor(scope: Construct, id: string, props?: StackProps) {
+    constructor(scope: Construct, id: string, props: InfrastructureStackProps) {
         super(scope, id, props);
 
         const websiteBucket = new Bucket(this, WebsiteBucketId, {
@@ -31,7 +38,8 @@ export class InfraStack extends Stack {
 
         new Distribution(this, CloudfrontDistributionId, {
             defaultBehavior: {
-                origin: new S3Origin(websiteBucket, { originAccessIdentity })
+                origin: new S3Origin(websiteBucket, { originAccessIdentity }),
+                viewerProtocolPolicy: ViewerProtocolPolicy.REDIRECT_TO_HTTPS
             },
             errorResponses: [
                 {
@@ -40,7 +48,14 @@ export class InfraStack extends Stack {
                     responseHttpStatus: 200
                 }
             ],
-            defaultRootObject: 'index.html'
+            defaultRootObject: 'index.html',
+            comment: 'Portfolio Website Cloudfront Distribution',
+            domainNames: [`www.${props.websiteDomainName}`],
+            certificate: Certificate.fromCertificateArn(
+                this,
+                CloudfrontDistributionCertificateId,
+                props.certificateArn
+            )
         });
 
         Tags.of(this).add(ProjectTag, ApplicationName);
