@@ -44,7 +44,7 @@ export function ProjectCard({
     return (
         <Card
             id={id}
-            className="bg-neutral-900 drop-shadow-md shadow-muted-foreground h-full cursor-pointer"
+            className="bg-neutral-900 drop-shadow-md shadow-muted-foreground h-full cursor-pointer flex flex-col"
         >
             <CardHeader>
                 <CardTitle className="text-primary-foreground cursor-pointer">
@@ -69,7 +69,7 @@ export function ProjectCard({
                 </div>
             </CardHeader>
             <Separator />
-            <CardContent className="p-3 pt-0">
+            <CardContent className="p-3 pt-0 flex-grow">
                 <div className="text-xs text-primary-foreground cursor-text mt-2">
                     <div>{description}</div>
                     <div className="pt-4">{involvement}</div>
@@ -77,7 +77,7 @@ export function ProjectCard({
             </CardContent>
             <Separator />
             <CardFooter className="p-2">
-                <div className="mt-2 flex flex-row gap-2 flex-wrap">
+                <div className="mt-1 mb-1 flex flex-row gap-2 flex-wrap">
                     {tags.map(tag => (
                         <ProjectCardTag key={tag} label={tag} />
                     ))}

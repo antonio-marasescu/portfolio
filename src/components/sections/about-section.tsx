@@ -4,6 +4,7 @@ import { StandardSectionLayout } from '@/components/layouts/standard-section-lay
 import { AboutInformation } from '@/components/constants/about.constants.ts';
 import { NavigationSections } from '@/components/constants/navigation.constants.ts';
 import { navigateToExternalUrl } from '@/components/utils/navigation.utils.ts';
+import { Fragment } from 'react';
 
 export function AboutSection() {
     return (
@@ -12,8 +13,17 @@ export function AboutSection() {
             sectionTitle={NavigationSections.About.label}
         >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8  justify-items-center">
-                <div className="text-xs md:text-base text-muted-foreground col-span-2">
-                    <p>{AboutInformation.description}</p>
+                <div className="text-xs md:text-base text-foreground col-span-2">
+                    <p>
+                        {AboutInformation.description
+                            .split('\n')
+                            .map((line, index) => (
+                                <Fragment key={index}>
+                                    {line}
+                                    <br />
+                                </Fragment>
+                            ))}
+                    </p>
                     <div className="flex flex-row flex-wrap gap-4 pt-4 md:pt-6">
                         <Button
                             variant="outline"

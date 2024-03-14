@@ -58,7 +58,7 @@ export const Skills: Record<string, { name: string; url: string }> = {
         url: 'technologies/frontend/storybook.png'
     },
     NodeJS: {
-        name: 'NodeJS',
+        name: 'NodeJs',
         url: 'technologies/backend/nodejs.png'
     },
     SpringBoot: {
@@ -138,12 +138,28 @@ export const Skills: Record<string, { name: string; url: string }> = {
         url: 'technologies/miscellaneous/nx.jpg'
     },
     Esbuild: {
-        name: 'Esbuild',
+        name: 'ESBuild',
         url: 'technologies/miscellaneous/esbuild.png'
     },
     Ethereum: {
         name: 'Ethereum',
         url: 'technologies/miscellaneous/ethereum.png'
+    },
+    Corda: {
+        name: 'Corda',
+        url: ''
+    },
+    LLM: {
+        name: 'LLM',
+        url: ''
+    },
+    OpenAI: {
+        name: 'OpenAI',
+        url: ''
+    },
+    LangChain: {
+        name: 'LangChain',
+        url: ''
     }
 };
 

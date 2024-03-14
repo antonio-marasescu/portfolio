@@ -1,8 +1,10 @@
+import { Fragment } from 'react';
+
 export interface TimelineSubEventProps {
     id: string;
     title: string;
     period: string;
-    description: string;
+    description: string[];
 }
 export interface TimelineEventProps {
     id: string;
@@ -11,6 +13,13 @@ export interface TimelineEventProps {
 }
 
 function TimelineEvent({ title, subEvents }: TimelineEventProps) {
+    const MultilineText = ({ text }: { text: string }) =>
+        text.split('\n').map((line, index) => (
+            <Fragment key={index}>
+                {line}
+                <br />
+            </Fragment>
+        ));
     const TimelineSubEvent = ({
         id,
         title,
@@ -23,11 +32,18 @@ function TimelineEvent({ title, subEvents }: TimelineEventProps) {
                     <div className="text-base md:text-xl text-neutral-700 font-bold">
                         {title}
                     </div>
-                    <div className="text-xs text-muted-foreground">
+                    <div className="text-sm text-muted-foreground">
                         {period}
                     </div>
-                    <div className="text-base text-foreground tracking-tight pt-1">
-                        {description}
+                    <div className="pt-1">
+                        {description.map((descriptionFragment, index) => (
+                            <div
+                                key={index}
+                                className="text-base text-foreground tracking-tight mt-1"
+                            >
+                                <MultilineText text={descriptionFragment} />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

@@ -9,23 +9,28 @@ export function HomeSection() {
     const words = [
         {
             text: 'Hello',
-            className: 'text-zinc-200 dark:text-zinc-900'
+            className:
+                'text-zinc-200 dark:text-zinc-900 text-xl sm:text-3xl lg:text-4xl'
         },
         {
             text: 'my',
-            className: 'text-zinc-200 dark:text-zinc-900'
+            className:
+                'text-zinc-200 dark:text-zinc-900 text-xl sm:text-3xl lg:text-4xl'
         },
         {
             text: 'name',
-            className: 'text-zinc-200 dark:text-zinc-900'
+            className:
+                'text-zinc-200 dark:text-zinc-900 text-xl sm:text-3xl lg:text-4xl'
         },
         {
             text: 'is',
-            className: 'text-zinc-200 dark:text-zinc-900'
+            className:
+                'text-zinc-200 dark:text-zinc-900 text-xl sm:text-3xl lg:text-4xl'
         },
         {
             text: `${HomeInformation.firstName}.`,
-            className: 'text-violet-600 dark:text-violet-600'
+            className:
+                'text-violet-600 dark:text-violet-600 text-xl sm:text-3xl lg:text-4xl'
         }
     ];
     return (
@@ -39,7 +44,7 @@ export function HomeSection() {
                     {HomeInformation.role}
                 </p>
             </div>
-            <div className="flex flex-row flex-wrap gap-6 justify-center items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center items-center">
                 <Button
                     variant="outline"
                     onClick={() =>

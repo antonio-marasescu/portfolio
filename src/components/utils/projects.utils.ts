@@ -8,7 +8,9 @@ export function filterProjectCards(
     return projects.filter(
         project =>
             project.tags.filter(tag =>
-                cleanText(tag).includes(cleanText(searchText))
+                tag.length > 0
+                    ? cleanText(tag) === cleanText(searchText)
+                    : false
             ).length > 0
     );
 }
