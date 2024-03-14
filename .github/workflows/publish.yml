@@ -31,6 +31,6 @@ jobs:
       - name: Build sources
         run: npm run build
       - name: Publish website
-        run: aws s3 sync ./dist s3://${{ vars.AWS_BUCKET_NAME }}
+        run: aws s3 sync ./dist s3://${{ vars.AWS_BUCKET_NAME }} --delete
       - name: Invalidate Cloudfront
         run: aws cloudfront create-invalidation --distribution-id ${{ vars.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
