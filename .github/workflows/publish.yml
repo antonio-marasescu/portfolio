@@ -22,7 +22,7 @@ jobs:
           node-version: 20.x
           cache: npm
       - name: Configure Credentials
-        uses: aws-action/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ vars.AWS_IAM }}
           aws-region: ${{ vars.AWS_REGION }}
