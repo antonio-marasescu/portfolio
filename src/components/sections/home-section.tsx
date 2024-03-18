@@ -3,7 +3,10 @@ import { Button } from '@/components/ui/button.tsx';
 import { Download, Linkedin } from 'lucide-react';
 import { HomeInformation } from '@/components/constants/home.constants.ts';
 import { NavigationSections } from '@/components/constants/navigation.constants.ts';
-import { navigateToExternalUrl } from '@/components/utils/navigation.utils.ts';
+import {
+    downloadFileByUrl,
+    navigateToExternalUrl
+} from '@/components/utils/link.utils.ts';
 
 export function HomeSection() {
     const words = [
@@ -54,7 +57,12 @@ export function HomeSection() {
                     <Linkedin className="mr-2 h-4 w-4" />
                     Get in touch
                 </Button>
-                <Button variant="default">
+                <Button
+                    variant="default"
+                    onClick={() =>
+                        downloadFileByUrl('resume.pdf', 'antonio-resume.pdf')
+                    }
+                >
                     <Download className="mr-2 h-4 w-4" />
                     Download CV
                 </Button>

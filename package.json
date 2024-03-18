@@ -9,6 +9,7 @@
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview",
         "pretty-quick": "pretty-quick --staged",
+        "build:resume": "npx hackmyresume BUILD antonio-resume.json -t node_modules/jsonresume-theme-elegant",
         "prepare": "husky"
     },
     "dependencies": {
@@ -41,7 +42,11 @@
         "eslint": "^8.56.0",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.5",
+        "hackmyresume": "^1.9.0-beta",
         "husky": "^9.0.11",
+        "jsonresume-theme-elegant": "^1.16.1",
+        "jsonresume-theme-kendall": "^0.2.0",
+        "jsonresume-theme-macchiato": "^1.1.0",
         "postcss": "^8.4.35",
         "prettier": "^3.2.5",
         "pretty-quick": "^4.0.0",

@@ -1,5 +1,5 @@
 import { GithubIcon } from 'lucide-react';
-import { navigateToExternalUrl } from '@/components/utils/navigation.utils.ts';
+import { navigateToExternalUrl } from '@/components/utils/link.utils.ts';
 import { ProfileUrls } from '@/components/constants/profile-urls.constants.ts';
 
 export function FooterSection() {

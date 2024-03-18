@@ -9,7 +9,7 @@ import {
     DrawerTitle,
     DrawerTrigger
 } from '@/components/ui/drawer.tsx';
-import { navigateToSection } from '@/components/utils/navigation.utils.ts';
+import { navigateToSection } from '@/components/utils/link.utils.ts';
 import { NavigationSectionsList } from '@/components/constants/navigation.constants.ts';
 
 export function NavigationMenu() {
@@ -41,8 +41,11 @@ export function NavigationMenu() {
                                 <Button
                                     variant="outline"
                                     className="bg-neutral-900 drop-shadow-md shadow-muted-foreground text-neutral-200 hover:text-neutral-800"
-                                    onClick={() =>
-                                        navigateToSection(navigationSection.id)
+                                    onClick={event =>
+                                        navigateToSection(
+                                            event,
+                                            navigationSection.id
+                                        )
                                     }
                                 >
                                     {navigationSection.label}

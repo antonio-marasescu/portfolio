@@ -6,7 +6,7 @@ import {
     TooltipProvider,
     TooltipTrigger
 } from '@/components/ui/tooltip.tsx';
-import { navigateToExternalUrl } from '@/components/utils/navigation.utils.ts';
+import { navigateToExternalUrl } from '@/components/utils/link.utils.ts';
 
 export type CardIconType = 'Github' | 'Website';
 

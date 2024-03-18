@@ -3,7 +3,7 @@ import { GithubIcon, LinkedinIcon } from 'lucide-react';
 import { StandardSectionLayout } from '@/components/layouts/standard-section-layout.tsx';
 import { AboutInformation } from '@/components/constants/about.constants.ts';
 import { NavigationSections } from '@/components/constants/navigation.constants.ts';
-import { navigateToExternalUrl } from '@/components/utils/navigation.utils.ts';
+import { navigateToExternalUrl } from '@/components/utils/link.utils.ts';
 import { Fragment } from 'react';
 
 export function AboutSection() {
