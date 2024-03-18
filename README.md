@@ -12,8 +12,8 @@ This is my personal portfolio website containing the code for the website, the s
 
 -   `/src` the frontend application code.
 -   `/infrastructure` the CDK code for hosting on AWS.
+-   `/.github/workflows` for the project deployment pipelines.
 -   `antonio-resume.json` the [json resume standard](https://jsonresume.org/) for the pdf.
--   `.github/workflow` for the project deployment pipelines.
 
 ## Acknowledgments
 
