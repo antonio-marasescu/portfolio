@@ -7,6 +7,7 @@ import { EducationSection } from '@/components/sections/education-section.tsx';
 import { ProjectsSection } from '@/components/sections/projects-section.tsx';
 import { FooterSection } from '@/components/sections/footer-section.tsx';
 import { NavigationMenu } from '@/components/navigation/navigation-menu.tsx';
+import { CertificationsSection } from '@/components/sections/certifications-section.tsx';
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <SkillsSection />
             <WorkHistorySection />
             <EducationSection />
+            <CertificationsSection />
             <ProjectsSection />
             <FooterSection />
         </AppLayout>

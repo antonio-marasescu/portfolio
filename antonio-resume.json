@@ -112,10 +112,16 @@
     "awards": [],
     "certificates": [
         {
+            "name": "AWS Certified Developer – Associate",
+            "date": "2024-05-30",
+            "issuer": "Amazon Web Services Training and Certification",
+            "url": "https://www.credly.com/badges/6217b40a-d8d9-4dae-aa1c-6a605db9e9f0/public_url"
+        },
+        {
             "name": "Corda Certified Developer",
             "date": "2020-03-17",
             "issuer": "R3",
-            "url": "https://www.credly.com/badges/23b49756-5e7a-40dc-8bf5-3687f4ed1b6a/linked_in_profile"
+            "url": "https://www.credly.com/badges/23b49756-5e7a-40dc-8bf5-3687f4ed1b6a/public_url"
         }
     ],
     "publications": [],

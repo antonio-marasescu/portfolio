@@ -21,6 +21,10 @@ export const NavigationSections = {
         id: 'education',
         label: 'Education'
     } as NavigationSection,
+    Certifications: {
+        id: 'certifications',
+        label: 'Certifications'
+    } as NavigationSection,
     Projects: {
         id: 'projects',
         label: 'Projects'
