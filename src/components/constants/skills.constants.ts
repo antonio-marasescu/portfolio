@@ -145,21 +145,17 @@ export const Skills: Record<string, { name: string; url: string }> = {
         name: 'Ethereum',
         url: 'technologies/miscellaneous/ethereum.png'
     },
-    Corda: {
-        name: 'Corda',
-        url: ''
-    },
     LLM: {
-        name: 'LLM',
-        url: ''
+        name: 'Large Language Models',
+        url: 'technologies/miscellaneous/llm.png'
     },
     OpenAI: {
         name: 'OpenAI',
-        url: ''
+        url: 'technologies/miscellaneous/openai.png'
     },
     LangChain: {
         name: 'LangChain',
-        url: ''
+        url: 'technologies/miscellaneous/langchain.webp'
     }
 };
 
@@ -327,6 +323,18 @@ export const SkillCards: SkillCardProps[] = [
             },
             {
                 ...Skills.Esbuild,
+                flagged: false
+            },
+            {
+                ...Skills.LLM,
+                flagged: false
+            },
+            {
+                ...Skills.OpenAI,
+                flagged: false
+            },
+            {
+                ...Skills.LangChain,
                 flagged: false
             },
             {

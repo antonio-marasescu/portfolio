@@ -9,8 +9,9 @@ export const WorkHistoryEvents: TimelineEventProps[] = [
                 id: 'work-history-001',
                 title: 'Senior Software Engineer',
                 description: [
-                    `At present, I am leading a team focused on the development and integration of Large Language Model (LLM) solutions into an Objective and Key Results (OKR) management application, leveraging a completely serverless architecture. I bear the primary responsibility for the architectural design and research on various subjects, as well as managing the AWS cloud infrastructure using the CDK.`,
-                    `I am spearheading the creation of an internal component library for the company, designed to enhance brand consistency and facilitate reusability across its internal projects.`,
+                    'I am currently working as a Senior Frontend Engineer on multiple Allianz Switzerland insurance projects, where I develop and maintain web applications to high-quality standards.',
+                    `Previously, I lead a team focused on the development and integration of Large Language Model (LLM) solutions into an Objective and Key Results (OKR) management application, leveraging a completely serverless architecture. I bear the primary responsibility for the architectural design and research on various subjects, as well as managing the AWS cloud infrastructure using the CDK.`,
+                    `I am also spearheading the creation of an internal component library for the company, designed to enhance brand consistency and facilitate reusability across its internal projects.`,
                     `Worked on developing a platform that Babeș-Bolyai University aims to showcase its projects that involve citizens in a comprehensive and accessible manner. My role involved full-stack development duties, with a focus on refining and improving challenging aspects of the application, including functionality, JPA query optimization, and enhancing overall code cleanliness and quality.`,
                     `Worked on a responsive processing application for leads in sales management which needed to handle large amount of external imported data through excel, being the main frontend developer and contributing to the AWS architecture.`
                 ],
