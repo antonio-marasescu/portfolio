@@ -3,16 +3,16 @@
     <h2 class="text-2xl md:text-3xl font-bold underline underline-offset-4 decoration-2">
       # Certifications
     </h2>
-    <div
-      class="w-full max-w-xl md:max-w-6xl flex flex-col gap-4"
-    >
+    <div class="w-full max-w-xl md:max-w-6xl flex flex-col gap-4">
       <div class="flex flex-col md:flex-row justify-center gap-2">
         @for (item of CvCertifications.certifications; track item.id) {
-          <div class="w-full flex flex-col items-center gap-6 p-8"
-               pAnimateOnScroll
-               [once]="true"
-               enterClass="animate-enter fade-in-10 slide-in-from-r-6 animate-duration-700"
-               leaveClass="animate-leave fade-out">
+          <div
+            class="w-full flex flex-col items-center gap-6 p-8"
+            pAnimateOnScroll
+            [once]="true"
+            enterClass="animate-enter fade-in-10 slide-in-from-r-6 animate-duration-700"
+            leaveClass="animate-leave fade-out"
+          >
             <p-image
               [src]="item.imageUrl"
               [alt]="item.name"
