@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap for Antonio Marasescu Duran's portfolio
+Sitemap: https://www.antoniomarasescuduran.com/sitemap.xml
+
+# Allow all content for portfolio site
+# No restrictions needed for public portfolio content

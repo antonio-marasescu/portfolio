@@ -1,6 +1,5 @@
 import { inject, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppRoutes } from '../types/navigation/app-routes.types';
 
 @Injectable({ providedIn: 'root' })
 export class NavigationService {
@@ -8,10 +7,6 @@ export class NavigationService {
 
   public navigateOutside(url: string): void {
     window.open(url, '_blank');
-  }
-
-  public async navigateInside(route: AppRoutes): Promise<void> {
-    await this.router.navigate([route]);
   }
 
   public scrollToSection(id: string): void {
