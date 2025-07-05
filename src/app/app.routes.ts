@@ -5,12 +5,10 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./components/pages/home/home-page.component').then(
-        (mod) => mod.HomePageComponent,
-      ),
+      import('./components/pages/home/home-page.component').then(mod => mod.HomePageComponent)
   },
   {
     path: '**',
-    redirectTo: AppRoutes.Home,
-  },
+    redirectTo: AppRoutes.Home
+  }
 ];
