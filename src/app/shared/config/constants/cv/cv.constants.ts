@@ -26,7 +26,7 @@ const CvAbout: About = {
   content: `Hello! I am Antonio, an IT enthusiast which works full-time as a Full-Stack Software Engineer,
     often taking on the responsibilities of a lead developer. This includes managing DevOps and sometimes overseeing a project architecture.\n
     I have expertise in web development, particularly with Angular and React, while on the backend, I typically use Node.js and Spring. In terms of cloud computing, my expertise lies in utilizing AWS, CDK, and Terraform.`,
-  imageUrl: 'profile/me.jpg',
+  imageUrl: 'profile/me.webp',
   imageUrlAlt: 'Antonio Marasescu-Duran Photo',
   topSkills: [
     CvAvailableSkills.Angular,
@@ -121,7 +121,7 @@ const CvWork: Work = {
     {
       id: 'msg-systems-romania',
       title: 'MSG Systems Romania',
-      logoUrl: 'work/msg-systems-romania.png',
+      logoUrl: 'work/msg-systems-romania.webp',
       timeline: [
         {
           id: 'msg-systems-senior',
@@ -174,7 +174,7 @@ const CvWork: Work = {
     {
       id: 'yardi-romania',
       title: 'Yardi Romania',
-      logoUrl: 'work/yardi-romania.jpg',
+      logoUrl: 'work/yardi-romania.webp',
       timeline: [
         {
           id: 'yardi-intern',
@@ -524,13 +524,13 @@ const CvCertifications: Certifications = {
       id: 'aws-certified-developer-associate',
       name: 'AWS Certified Developer Associate',
       url: 'https://www.credly.com/badges/6217b40a-d8d9-4dae-aa1c-6a605db9e9f0/public_url',
-      imageUrl: 'certifications/aws-certified-developer-associate.png'
+      imageUrl: 'certifications/aws-certified-developer-associate.webp'
     },
     {
       id: 'corda-certified-developer',
       name: 'Corda Certified Developer',
       url: 'https://www.credly.com/badges/23b49756-5e7a-40dc-8bf5-3687f4ed1b6a/public_url',
-      imageUrl: 'certifications/corda-certified-developer.png'
+      imageUrl: 'certifications/corda-certified-developer.webp'
     }
   ]
 };
