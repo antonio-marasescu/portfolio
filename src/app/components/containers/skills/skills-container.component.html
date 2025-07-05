@@ -24,10 +24,6 @@
         @for (category of filteredCategories(); track category.id) {
           <div
             class="flex flex-col gap-2"
-            pAnimateOnScroll
-            [once]="true"
-            enterClass="animate-enter fade-in-10 slide-in-from-r-6 animate-duration-1000"
-            leaveClass="animate-leave fade-out"
           >
             <h4 class="text-xl font-bold text-center md:text-start">
               {{ category.label }}
@@ -36,6 +32,10 @@
               @for (skill of category.skills; track skill.id) {
                 <p-card
                   class="min-w-50 max-w-50 min-h-50 max-h-50 hover:shadow-lg hover:shadow-blue-500/20"
+                  pAnimateOnScroll
+                  [once]="true"
+                  enterClass="animate-enter fade-in-10 slide-in-from-r-6 animate-duration-700"
+                  leaveClass="animate-leave fade-out"
                 >
                   <ng-template #header>
                     <div

@@ -25,7 +25,7 @@
                 <i class="pi pi-trophy"></i>
                 Core Skills
               </h3>
-              <div class="flex gap-4 mt-1">
+              <div class="flex flex-wrap gap-4 mt-1">
                 @for (topSkill of CvAbout.topSkills; track topSkill.id) {
                   <p-tag [value]="topSkill.label" [rounded]="true" />
                 }

@@ -7,19 +7,28 @@
       @for (company of CvWork.history; track company.id) {
         <div
           class="grid grid-cols-1 md:grid-cols-12 gap-8"
-          pAnimateOnScroll
-          [once]="true"
-          enterClass="animate-enter fade-in-10 slide-in-from-r-6 animate-duration-1000"
-          leaveClass="animate-leave fade-out"
         >
           <div class="md:col-span-2 flex flex-row justify-center">
-            <p-image [src]="company.logoUrl" width="128" [alt]="company.title" />
+            <p-image [src]="company.logoUrl" width="128" [alt]="company.title"
+                     pAnimateOnScroll
+                     [once]="true"
+                     enterClass="animate-enter fade-in-10 slide-in-from-r-6 animate-duration-700"
+                     leaveClass="animate-leave fade-out"/>
           </div>
-          <div class="flex flex-col gap-6 md:col-span-10">
-            <h3 class="text-2xl font-bold">{{ company.title }}</h3>
+          <div class="flex flex-col gap-6 md:col-span-10"
+          >
+            <h3 class="text-2xl font-bold"
+                pAnimateOnScroll
+                [once]="true"
+                enterClass="animate-enter fade-in-10 slide-in-from-r-6 animate-duration-700"
+                leaveClass="animate-leave fade-out">{{ company.title }}</h3>
             <div class="flex flex-col gap-8">
               @for (item of company.timeline; track item.id) {
-                <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-2"
+                     pAnimateOnScroll
+                     [once]="true"
+                     enterClass="animate-enter fade-in-10 slide-in-from-r-6 animate-duration-700"
+                     leaveClass="animate-leave fade-out">
                   <h4 class="text-xl font-bold">{{ item.title }}</h4>
                   <h5 class="text-base">
                     <p-tag [value]="item.period" severity="info" [rounded]="true" />

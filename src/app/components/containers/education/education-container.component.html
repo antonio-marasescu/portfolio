@@ -5,14 +5,14 @@
     </h2>
     <div
       class="w-full max-w-xl md:max-w-6xl flex flex-col gap-4"
-      pAnimateOnScroll
-      [once]="true"
-      enterClass="animate-enter fade-in-10 slide-in-from-r-6 animate-duration-1000"
-      leaveClass="animate-leave fade-out"
     >
       <div class="flex flex-col md:flex-row justify-center gap-2">
         @for (item of CvEducation.history; track item.id) {
-          <div class="w-full flex flex-col gap-2 p-8">
+          <div class="w-full flex flex-col gap-2 p-8"
+               pAnimateOnScroll
+               [once]="true"
+               enterClass="animate-enter fade-in-10 slide-in-from-r-6 animate-duration-700"
+               leaveClass="animate-leave fade-out">
             <h3 class="text-xl font-bold">
               {{ item.title }}
             </h3>
