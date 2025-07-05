@@ -1,0 +1,23 @@
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ScrollTop } from 'primeng/scrolltop';
+
+@Component({
+  selector: 'app-standard-layout',
+  imports: [ScrollTop],
+  template: `
+    <div class="h-screen w-full flex flex-col justify-start items-start">
+      <div class="pb-0 pt-4">
+        <ng-content select="[nav]"></ng-content>
+      </div>
+      <div
+        class="p-6 pb-1 lg:p-10 lg:pt-10 lg:pb-10 w-full h-full gap-2 overflow-x-hidden layout-scrollbar scroll-hide-auto"
+      >
+        <ng-content select="[content]"></ng-content>
+        <p-scrolltop target="parent" [threshold]="100" icon="pi pi-arrow-up"></p-scrolltop>
+      </div>
+    </div>
+  `,
+  styleUrl: 'standard-layout.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class StandardLayoutComponent {}

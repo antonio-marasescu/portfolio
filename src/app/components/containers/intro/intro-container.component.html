@@ -1,0 +1,44 @@
+<app-section-layout [id]="NavigationItemType.Overview" [fullscreen]="true">
+  <div class="w-full h-full flex flex-col items-center gap-8 pt-32 md:pt-42" content>
+    <app-typewriter
+      [text]="CvIntro.welcome"
+      [extraClasses]="['text-2xl', 'md:text-4xl', 'font-extrabold']"
+    />
+    <div class="bg-surface-200/20 p-4 rounded-2xl">
+      <h3 class="text-xl md:text-2xl">{{ CvIntro.title }}</h3>
+    </div>
+    <div class="flex flex-col md:flex-row gap-4 items-center">
+      <p-button
+        label="Github"
+        icon="pi pi-github"
+        variant="outlined"
+        severity="primary"
+        (onClick)="onLinkEvent(CvIntro.githubUrl)"
+      />
+      <p-button
+        label="LinkedIn"
+        icon="pi pi-linkedin"
+        variant="outlined"
+        severity="info"
+        (onClick)="onLinkEvent(CvIntro.linkedInUrl)"
+      />
+      <p-button
+        label="Download CV"
+        icon="pi pi-download"
+        variant="outlined"
+        severity="help"
+        (onClick)="onDownloadCv()"
+      />
+    </div>
+    <div>
+      @if (CvIntro.status === 'available') {
+        <p-tag severity="success" value="Available for projects" />
+      } @else {
+        <p-tag severity="danger" value="Currently unavailable" />
+      }
+    </div>
+    <div class="animate-bounce [animation-duration:2s] text-xs motion-reduce:animate-none">
+      Scroll to find out more
+    </div>
+  </div>
+</app-section-layout>
