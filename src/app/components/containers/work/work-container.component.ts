@@ -17,7 +17,7 @@ import { AnimateOnScroll } from 'primeng/animateonscroll';
       font-size: 10px;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WorkContainerComponent {
   protected readonly CvWork: Work = Cv.work;

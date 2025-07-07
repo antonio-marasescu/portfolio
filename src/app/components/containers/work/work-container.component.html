@@ -1,8 +1,6 @@
 <app-section-layout [id]="NavigationItemType.Work">
   <div class="w-full h-full flex flex-col items-center gap-10 pt-12" content>
-    <h2
-      class="text-2xl md:text-3xl font-bold underline underline-offset-4 decoration-2"
-    >
+    <h2 class="text-2xl md:text-3xl font-bold underline underline-offset-4 decoration-2">
       # Work History
     </h2>
     <div class="w-full max-w-xl md:max-w-6xl flex flex-col gap-4">
@@ -40,11 +38,7 @@
                 >
                   <h4 class="text-xl font-bold">{{ item.title }}</h4>
                   <h5 class="text-base">
-                    <p-tag
-                      [value]="item.period"
-                      severity="info"
-                      [rounded]="true"
-                    />
+                    <p-tag [value]="item.period" severity="info" [rounded]="true" />
                   </h5>
                   <div>{{ item.description }}</div>
                   @if (item.achievements.length > 0) {
@@ -55,14 +49,9 @@
                         Achievements
                       </h5>
                       <ul class="ml-2">
-                        @for (
-                          achievement of item.achievements;
-                          track achievement
-                        ) {
+                        @for (achievement of item.achievements; track achievement) {
                           <li class="flex flex-row gap-2 items-center">
-                            <span class="material-icons"
-                              >fiber_manual_record</span
-                            >{{ achievement }}
+                            <span class="material-icons">fiber_manual_record</span>{{ achievement }}
                           </li>
                         }
                       </ul>

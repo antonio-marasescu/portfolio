@@ -22,6 +22,6 @@ import { ScrollTop } from 'primeng/scrolltop';
     </div>
   `,
   styleUrl: 'standard-layout.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class StandardLayoutComponent {}

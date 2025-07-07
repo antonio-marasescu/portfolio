@@ -4,10 +4,7 @@ import { ThemeSelectorComponent } from '../theming/theme-selector.component';
 import { Menubar } from 'primeng/menubar';
 import { Ripple } from 'primeng/ripple';
 import { NavigationService } from '../../services/navigation.service';
-import {
-  NavbarItem,
-  NavigationItemType,
-} from '../../types/navigation/navbar.types';
+import { NavbarItem, NavigationItemType } from '../../types/navigation/navbar.types';
 import { SplitButton } from 'primeng/splitbutton';
 import { CvPromptService } from '../../services/cv-prompt.service';
 import { UtilsService } from '../../services/utils.service';
@@ -49,9 +46,7 @@ import { UtilsService } from '../../services/utils.service';
               [model]="promptItems"
             >
               <ng-template #content>
-                <div
-                  class="flex flex-row items-center justify-center justify-items-center"
-                >
+                <div class="flex flex-row items-center justify-center justify-items-center">
                   <span class="material-icons-outlined mr-2">smart_toy</span>
                   <span class="text-sm lg:text-base">Prompt</span>
                 </div>
@@ -63,7 +58,7 @@ import { UtilsService } from '../../services/utils.service';
       </p-menubar>
     </div>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarComponent {
   protected readonly NavigationItems = NavigationItems;
@@ -74,20 +69,20 @@ export class NavbarComponent {
   protected readonly promptItems = [
     {
       label: 'Prompt Version (TXT)',
-      command: () => this.copyPromptVersionText(),
+      command: () => this.copyPromptVersionText()
     },
     {
       label: 'Prompt Version (XML)',
-      command: () => this.copyPromptVersionXml(),
+      command: () => this.copyPromptVersionXml()
     },
     {
       label: 'Review Prompt',
-      command: () => this.copyReviewPrompt(),
+      command: () => this.copyReviewPrompt()
     },
     {
       label: 'Summary Prompt',
-      command: () => this.copySummaryPrompt(),
-    },
+      command: () => this.copySummaryPrompt()
+    }
   ];
 
   protected navigateToSection(item: NavbarItem): void {
@@ -101,25 +96,19 @@ export class NavbarComponent {
 
   protected copyPromptVersionText(): void {
     const cleanCv = this.cvPromptService.retrieveCleanCv('text');
-    this.utilsService.copyToClipboard(
-      cleanCv,
-      'The TXT prompt has been copied to your clipboard',
-    );
+    this.utilsService.copyToClipboard(cleanCv, 'The TXT prompt has been copied to your clipboard');
   }
 
   protected copyPromptVersionXml(): void {
     const cleanCv = this.cvPromptService.retrieveCleanCv('xml');
-    this.utilsService.copyToClipboard(
-      cleanCv,
-      'The XML prompt has been copied to your clipboard',
-    );
+    this.utilsService.copyToClipboard(cleanCv, 'The XML prompt has been copied to your clipboard');
   }
 
   protected copyReviewPrompt(): void {
     const cleanCv = this.cvPromptService.retrieveReviewPrompt('xml');
     this.utilsService.copyToClipboard(
       cleanCv,
-      'The review prompt has been copied to your clipboard',
+      'The review prompt has been copied to your clipboard'
     );
   }
 
@@ -127,7 +116,7 @@ export class NavbarComponent {
     const cleanCv = this.cvPromptService.retrieveSummaryPrompt('xml');
     this.utilsService.copyToClipboard(
       cleanCv,
-      'The summary prompt has been copied to your clipboard',
+      'The summary prompt has been copied to your clipboard'
     );
   }
 }
