@@ -19,14 +19,14 @@ import { NgStyle } from '@angular/common';
           [style.animation-delay]="spot.delay + 's'"
           [ngStyle]="{
             background: spot.color,
-            'box-shadow': spot.shadow,
+            'box-shadow': spot.shadow
           }"
         ></div>
       }
     </div>
   `,
   styleUrl: 'particle-background.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ParticleBackgroundComponent {
   glowingSpots = Array.from({ length: 15 }, (_, index) => {
@@ -38,7 +38,7 @@ export class ParticleBackgroundComponent {
       'rgba(251, 146, 60, 0.25)', // orange
       'rgba(168, 85, 247, 0.25)', // violet
       'rgba(14, 165, 233, 0.25)', // sky blue
-      'rgba(16, 185, 129, 0.25)', // emerald
+      'rgba(16, 185, 129, 0.25)' // emerald
     ];
 
     const color = colors[index % colors.length];
@@ -56,7 +56,7 @@ export class ParticleBackgroundComponent {
       opacity,
       color,
       shadow: `0 0 ${size * 0.6}px ${size * 0.3}px ${color}`,
-      animationClass: isFloating ? 'animate-spot-float' : 'animate-spot-pulse',
+      animationClass: isFloating ? 'animate-spot-float' : 'animate-spot-pulse'
     };
   });
 }
