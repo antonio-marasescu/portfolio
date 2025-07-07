@@ -31,14 +31,14 @@ import { NgStyle } from '@angular/common';
 export class ParticleBackgroundComponent {
   glowingSpots = Array.from({ length: 15 }, (_, index) => {
     const colors = [
-      'rgba(59, 130, 246, 0.25)', // blue
-      'rgba(147, 51, 234, 0.25)', // purple
-      'rgba(177,0,40,0.25)', // red
-      'rgba(34, 197, 94, 0.25)', // green
-      'rgba(251, 146, 60, 0.25)', // orange
-      'rgba(168, 85, 247, 0.25)', // violet
-      'rgba(14, 165, 233, 0.25)', // sky blue
-      'rgba(16, 185, 129, 0.25)' // emerald
+      'oklch(0.7 0.2 240 / 0.25)', // blue - more vibrant
+      'oklch(0.65 0.25 280 / 0.25)', // purple - richer
+      'oklch(0.6 0.3 15 / 0.25)', // red - more saturated
+      'oklch(0.75 0.2 140 / 0.25)', // green - brighter
+      'oklch(0.7 0.25 45 / 0.25)', // orange - more vivid
+      'oklch(0.6 0.3 300 / 0.25)', // violet - deeper
+      'oklch(0.8 0.15 200 / 0.25)', // sky blue - lighter
+      'oklch(0.7 0.2 160 / 0.25)' // emerald - more natural
     ];
 
     const color = colors[index % colors.length];
