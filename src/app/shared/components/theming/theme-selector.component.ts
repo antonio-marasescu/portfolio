@@ -10,21 +10,27 @@ import { Ripple } from 'primeng/ripple';
     @if (theme() === AppTheme.Light) {
       <p-button
         pRipple
-        icon="pi pi-moon"
-        severity="info"
         [text]="true"
         [rounded]="true"
+        severity="info"
         (onClick)="onThemeChange(AppTheme.Dark)"
-      />
+      >
+        <ng-template #icon>
+          <span class="material-icons">dark_mode</span>
+        </ng-template>
+      </p-button>
     } @else {
       <p-button
         pRipple
-        icon="pi pi-sun"
-        severity="warn"
         [text]="true"
         [rounded]="true"
+        severity="warn"
         (onClick)="onThemeChange(AppTheme.Light)"
-      />
+      >
+        <ng-template #icon>
+          <span class="material-icons">light_mode</span>
+        </ng-template>
+      </p-button>
     }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush

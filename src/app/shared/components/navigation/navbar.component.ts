@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { NavigationItems } from '../../config/constants/navigation/navigation.constants';
 import { ThemeSelectorComponent } from '../theming/theme-selector.component';
 import { Menubar } from 'primeng/menubar';
-import { NgClass } from '@angular/common';
 import { Ripple } from 'primeng/ripple';
 import { NavigationService } from '../../services/navigation.service';
 import { NavbarItem, NavigationItemType } from '../../types/navigation/navbar.types';
@@ -12,7 +11,7 @@ import { UtilsService } from '../../services/utils.service';
 
 @Component({
   selector: 'app-navbar',
-  imports: [ThemeSelectorComponent, Menubar, NgClass, Ripple, SplitButton],
+  imports: [ThemeSelectorComponent, Menubar, Ripple, SplitButton],
   template: `
     <div class="w-screen min-h-20 flex flex-row justify-center">
       <p-menubar [model]="NavigationItems" class="rounded-full  min-w-62 m-2">
@@ -26,11 +25,13 @@ import { UtilsService } from '../../services/utils.service';
             (keydown.space)="navigateToSection(item)"
           >
             @if (item.icon) {
-              <i [class]="item.icon"></i>
+              <span class="material-icons">{{ item.icon }}</span>
             }
             <span>{{ item.label }}</span>
             @if (item.items) {
-              <i [ngClass]="['ml-auto pi', root ? 'pi-angle-down' : 'pi-angle-right']"></i>
+              <span class="material-icons ml-auto">{{
+                root ? 'expand_more' : 'chevron_right'
+              }}</span>
             }
           </a>
         </ng-template>
@@ -46,7 +47,7 @@ import { UtilsService } from '../../services/utils.service';
             >
               <ng-template #content>
                 <div class="flex flex-row items-center justify-center justify-items-center">
-                  <i class="pi pi-microchip-ai mr-2"></i>
+                  <span class="material-icons mr-2">smart_toy</span>
                   <span class="text-sm lg:text-base">Prompt</span>
                 </div>
               </ng-template>

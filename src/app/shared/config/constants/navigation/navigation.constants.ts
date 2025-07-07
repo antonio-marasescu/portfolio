@@ -4,43 +4,43 @@ export const NavigationItems: NavbarItem[] = [
   {
     id: NavigationItemType.Overview,
     label: 'Overview',
-    icon: 'pi pi-home'
+    icon: 'home'
   },
   {
     id: NavigationItemType.About,
     label: 'About',
-    icon: 'pi pi-user'
+    icon: 'person'
   },
   {
     id: NavigationItemType.Experience,
     label: 'Experience',
-    icon: 'pi pi-briefcase',
+    icon: 'work',
     items: [
       {
         id: NavigationItemType.Skills,
         label: 'Skills',
-        icon: 'pi pi-cog'
+        icon: 'settings'
       },
       {
         id: NavigationItemType.Work,
         label: 'Work',
-        icon: 'pi pi-building'
+        icon: 'business'
       },
       {
         id: NavigationItemType.Education,
         label: 'Education',
-        icon: 'pi pi-book'
+        icon: 'school'
       }
     ]
   },
   {
     id: NavigationItemType.Projects,
     label: 'Projects',
-    icon: 'pi pi-folder'
+    icon: 'folder'
   },
   {
     id: NavigationItemType.Certifications,
     label: 'Certifications',
-    icon: 'pi pi-check-circle'
+    icon: 'check_circle'
   }
 ];

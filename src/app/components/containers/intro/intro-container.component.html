@@ -10,25 +10,29 @@
     <div class="flex flex-col md:flex-row gap-4 items-center">
       <p-button
         label="Github"
-        icon="pi pi-github"
         variant="outlined"
         severity="primary"
         (onClick)="onLinkEvent(CvIntro.githubUrl)"
-      />
+      >
+        <ng-template #icon>
+          <span class="material-icons">code</span>
+        </ng-template>
+      </p-button>
       <p-button
         label="LinkedIn"
-        icon="pi pi-linkedin"
         variant="outlined"
         severity="info"
         (onClick)="onLinkEvent(CvIntro.linkedInUrl)"
-      />
-      <p-button
-        label="Download CV"
-        icon="pi pi-download"
-        variant="outlined"
-        severity="help"
-        (onClick)="onDownloadCv()"
-      />
+      >
+        <ng-template #icon>
+          <span class="material-icons">link</span>
+        </ng-template>
+      </p-button>
+      <p-button label="Download CV" variant="outlined" severity="help" (onClick)="onDownloadCv()">
+        <ng-template #icon>
+          <span class="material-icons">download</span>
+        </ng-template>
+      </p-button>
     </div>
     <div>
       @if (CvIntro.status === 'available') {

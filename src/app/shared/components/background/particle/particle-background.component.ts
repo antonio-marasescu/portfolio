@@ -29,7 +29,7 @@ import { NgStyle } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ParticleBackgroundComponent {
-  glowingSpots = Array.from({ length: 15 }, (_, index) => {
+  protected readonly glowingSpots = Array.from({ length: 15 }, (_, index) => {
     const colors = [
       'oklch(0.7 0.2 240 / 0.25)', // blue - more vibrant
       'oklch(0.65 0.25 280 / 0.25)', // purple - richer

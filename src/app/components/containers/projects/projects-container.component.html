@@ -20,12 +20,15 @@
                 </h3>
                 @if (item.url) {
                   <p-button
-                    [icon]="item.isGithub ? 'pi pi-github' : 'pi pi-link'"
                     size="small"
                     severity="secondary"
                     [rounded]="true"
                     (onClick)="onProjectLink(item)"
-                  />
+                  >
+                    <ng-template #icon>
+                      <span class="material-icons">{{ item.isGithub ? 'code' : 'link' }}</span>
+                    </ng-template>
+                  </p-button>
                 }
               </div>
             </ng-template>
