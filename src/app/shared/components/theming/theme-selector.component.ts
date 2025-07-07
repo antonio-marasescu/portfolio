@@ -47,7 +47,13 @@ export class ThemeSelectorComponent {
 
   private getInitialTheme(): AppTheme {
     const saved = localStorage.getItem('theme') as AppTheme;
-    return saved ?? AppTheme.Light;
+    if (saved) {
+      return saved;
+    }
+
+    // Check user's system preference for dark mode
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return prefersDark ? AppTheme.Dark : AppTheme.Dark; // Default to dark mode
   }
 
   private setBodyThemeClass(theme: AppTheme) {
