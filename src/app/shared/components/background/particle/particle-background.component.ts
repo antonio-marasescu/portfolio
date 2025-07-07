@@ -19,17 +19,17 @@ import { NgStyle } from '@angular/common';
           [style.animation-delay]="spot.delay + 's'"
           [ngStyle]="{
             background: spot.color,
-            'box-shadow': spot.shadow
+            'box-shadow': spot.shadow,
           }"
         ></div>
       }
     </div>
   `,
   styleUrl: 'particle-background.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ParticleBackgroundComponent {
-  protected readonly glowingSpots = Array.from({ length: 15 }, (_, index) => {
+  protected readonly glowingSpots = Array.from({ length: 8 }, (_, index) => {
     const colors = [
       'oklch(0.7 0.2 240 / 0.25)', // blue - more vibrant
       'oklch(0.65 0.25 280 / 0.25)', // purple - richer
@@ -38,7 +38,7 @@ export class ParticleBackgroundComponent {
       'oklch(0.7 0.25 45 / 0.25)', // orange - more vivid
       'oklch(0.6 0.3 300 / 0.25)', // violet - deeper
       'oklch(0.8 0.15 200 / 0.25)', // sky blue - lighter
-      'oklch(0.7 0.2 160 / 0.25)' // emerald - more natural
+      'oklch(0.7 0.2 160 / 0.25)', // emerald - more natural
     ];
 
     const color = colors[index % colors.length];
@@ -50,13 +50,13 @@ export class ParticleBackgroundComponent {
       id: index,
       left: Math.random() * 100,
       top: Math.random() * 100,
-      duration: 6 + Math.random() * 8, // 6-14s
-      delay: Math.random() * 4, // 0-4s delay
+      duration: 6 + Math.random() * 6, // 6-14s
+      delay: Math.random() * 2, // 0-4s delay
       size,
       opacity,
       color,
-      shadow: `0 0 ${size * 0.6}px ${size * 0.3}px ${color}`,
-      animationClass: isFloating ? 'animate-spot-float' : 'animate-spot-pulse'
+      shadow: `0 0 ${size * 0.4}px ${size * 0.2}px ${color}`,
+      animationClass: isFloating ? 'animate-spot-float' : 'animate-spot-pulse',
     };
   });
 }
