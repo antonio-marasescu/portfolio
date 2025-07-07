@@ -3,3 +3,7 @@
 @plugin "tailwindcss-primeui";
 
 @custom-variant dark (&:where(.portfolio-dark, .portfolio-dark *));
+
+.material-icons-outlined {
+  font-size: 20px;
+}

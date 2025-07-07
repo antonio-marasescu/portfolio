@@ -1,5 +1,8 @@
 <app-section-layout [id]="NavigationItemType.Overview" [fullscreen]="true">
-  <div class="w-full h-full flex flex-col items-center gap-8 pt-32 md:pt-42" content>
+  <div
+    class="w-full h-full flex flex-col items-center gap-8 pt-32 md:pt-42"
+    content
+  >
     <app-typewriter
       [text]="CvIntro.welcome"
       [extraClasses]="['text-xl', 'md:text-4xl', 'font-extrabold']"
@@ -15,7 +18,7 @@
         (onClick)="onLinkEvent(CvIntro.githubUrl)"
       >
         <ng-template #icon>
-          <span class="material-icons-outlined text-sm">code</span>
+          <span class="material-icons-outlined">code</span>
         </ng-template>
       </p-button>
       <p-button
@@ -25,23 +28,30 @@
         (onClick)="onLinkEvent(CvIntro.linkedInUrl)"
       >
         <ng-template #icon>
-          <span class="material-icons-outlined text-sm">link</span>
+          <span class="material-icons-outlined">link</span>
         </ng-template>
       </p-button>
-      <p-button label="Download CV" variant="outlined" severity="help" (onClick)="onDownloadCv()">
+      <p-button
+        label="Download CV"
+        variant="outlined"
+        severity="help"
+        (onClick)="onDownloadCv()"
+      >
         <ng-template #icon>
-          <span class="material-icons-outlined text-sm">download</span>
+          <span class="material-icons-outlined">download</span>
         </ng-template>
       </p-button>
     </div>
     <div>
-      @if (CvIntro.status === 'available') {
+      @if (CvIntro.status === "available") {
         <p-tag severity="success" value="Available for projects" />
       } @else {
         <p-tag severity="danger" value="Currently unavailable" />
       }
     </div>
-    <div class="animate-bounce [animation-duration:2s] text-xs motion-reduce:animate-none">
+    <div
+      class="animate-bounce [animation-duration:2s] text-xs motion-reduce:animate-none"
+    >
       Scroll to find out more
     </div>
   </div>

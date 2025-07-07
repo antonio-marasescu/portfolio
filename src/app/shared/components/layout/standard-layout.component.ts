@@ -15,13 +15,13 @@ import { ScrollTop } from 'primeng/scrolltop';
         <ng-content select="[content]"></ng-content>
         <p-scrolltop target="parent" [threshold]="100">
           <ng-template #icon>
-            <span class="material-icons-outlined text-sm">keyboard_arrow_up</span>
+            <span class="material-icons-outlined">keyboard_arrow_up</span>
           </ng-template>
         </p-scrolltop>
       </div>
     </div>
   `,
   styleUrl: 'standard-layout.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StandardLayoutComponent {}

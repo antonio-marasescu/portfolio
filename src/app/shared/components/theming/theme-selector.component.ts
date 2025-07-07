@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, effect, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  effect,
+  signal,
+} from '@angular/core';
 import { AppTheme } from '../../types/theming/theming.types';
 import { Button } from 'primeng/button';
 import { Ripple } from 'primeng/ripple';
@@ -16,7 +21,7 @@ import { Ripple } from 'primeng/ripple';
         (onClick)="onThemeChange(AppTheme.Dark)"
       >
         <ng-template #icon>
-          <span class="material-icons-outlined text-sm">dark_mode</span>
+          <span class="material-icons-outlined">dark_mode</span>
         </ng-template>
       </p-button>
     } @else {
@@ -28,12 +33,12 @@ import { Ripple } from 'primeng/ripple';
         (onClick)="onThemeChange(AppTheme.Light)"
       >
         <ng-template #icon>
-          <span class="material-icons-outlined text-sm">light_mode</span>
+          <span class="material-icons-outlined">light_mode</span>
         </ng-template>
       </p-button>
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ThemeSelectorComponent {
   protected theme = signal<AppTheme>(this.getInitialTheme());
@@ -58,7 +63,9 @@ export class ThemeSelectorComponent {
     }
 
     // Check user's system preference for dark mode
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersDark = window.matchMedia(
+      '(prefers-color-scheme: dark)',
+    ).matches;
     return prefersDark ? AppTheme.Dark : AppTheme.Dark; // Default to dark mode
   }
 

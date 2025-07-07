@@ -1,10 +1,14 @@
 <app-section-layout [id]="NavigationItemType.Projects">
   <div class="w-full h-full flex flex-col items-center gap-10 pt-12" content>
-    <h2 class="text-2xl md:text-3xl font-bold underline underline-offset-4 decoration-2">
+    <h2
+      class="text-2xl md:text-3xl font-bold underline underline-offset-4 decoration-2"
+    >
       # Projects
     </h2>
     <div class="w-full max-w-xl md:max-w-6xl flex flex-col gap-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-8">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-8"
+      >
         @for (item of CvProjects.projects; track item.id) {
           <p-card
             class="w-full flex flex-col"
@@ -26,8 +30,8 @@
                     (onClick)="onProjectLink(item)"
                   >
                     <ng-template #icon>
-                      <span class="material-icons-outlined text-xs">{{
-                        item.isGithub ? 'code' : 'link'
+                      <span class="material-icons-outlined">{{
+                        item.isGithub ? "code" : "link"
                       }}</span>
                     </ng-template>
                   </p-button>
@@ -40,7 +44,9 @@
                 <p-tag [value]="item.period" severity="info" [rounded]="true" />
                 <p-tag
                   [value]="item.category"
-                  [severity]="item.category === 'Personal' ? 'success' : 'secondary'"
+                  [severity]="
+                    item.category === 'Personal' ? 'success' : 'secondary'
+                  "
                   [rounded]="true"
                 />
               </h5>
@@ -51,7 +57,11 @@
 
             <ng-template #footer>
               <p-divider></p-divider>
-              <p-panel header="Tech Stack" [collapsed]="true" [toggleable]="true">
+              <p-panel
+                header="Tech Stack"
+                [collapsed]="true"
+                [toggleable]="true"
+              >
                 <div class="flex flex-row flex-wrap gap-2">
                   @for (tag of item.tags; track tag) {
                     <p-tag severity="secondary" [rounded]="true">

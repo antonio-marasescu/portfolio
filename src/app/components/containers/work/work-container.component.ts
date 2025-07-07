@@ -12,7 +12,12 @@ import { AnimateOnScroll } from 'primeng/animateonscroll';
   selector: 'app-work-container',
   imports: [SectionLayoutComponent, Image, Divider, Tag, AnimateOnScroll],
   templateUrl: './work-container.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styles: `
+    .material-icons {
+      font-size: 10px;
+    }
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WorkContainerComponent {
   protected readonly CvWork: Work = Cv.work;
