@@ -5,29 +5,58 @@ import { NgStyle } from '@angular/common';
   selector: 'app-particle-background',
   imports: [NgStyle],
   template: `
-    <div class="background">
-      @for (particle of particles; track particle.id) {
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
+      @for (spot of glowingSpots; track spot.id) {
         <div
-          class="particle"
-          [style.left.%]="particle.left"
-          [style.width.px]="particle.size"
-          [style.height.px]="particle.size"
-          [style.opacity]="particle.opacity"
-          [style.animation-duration]="particle.duration + 's'"
-          [ngStyle]="{ '--i': particle.id / 30 }"
+          [class]="spot.animationClass"
+          class="absolute rounded-full blur-xl"
+          [style.left.%]="spot.left"
+          [style.top.%]="spot.top"
+          [style.width.px]="spot.size"
+          [style.height.px]="spot.size"
+          [style.opacity]="spot.opacity"
+          [style.animation-duration]="spot.duration + 's'"
+          [style.animation-delay]="spot.delay + 's'"
+          [ngStyle]="{
+            background: spot.color,
+            'box-shadow': spot.shadow,
+          }"
         ></div>
       }
     </div>
   `,
   styleUrl: 'particle-background.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ParticleBackgroundComponent {
-  particles = Array.from({ length: 20 }, (_, index) => ({
-    id: index,
-    left: Math.random() * 100,
-    duration: 10 + Math.random() * 10,
-    size: 4 + Math.random() * 4, // size between 4 and 10px
-    opacity: 0.4 + Math.random() * 0.6 // 0.4 to 1.0
-  }));
+  glowingSpots = Array.from({ length: 15 }, (_, index) => {
+    const colors = [
+      'rgba(59, 130, 246, 0.25)', // blue
+      'rgba(147, 51, 234, 0.25)', // purple
+      'rgba(177,0,40,0.25)', // red
+      'rgba(34, 197, 94, 0.25)', // green
+      'rgba(251, 146, 60, 0.25)', // orange
+      'rgba(168, 85, 247, 0.25)', // violet
+      'rgba(14, 165, 233, 0.25)', // sky blue
+      'rgba(16, 185, 129, 0.25)', // emerald
+    ];
+
+    const color = colors[index % colors.length];
+    const size = 60 + Math.random() * 140;
+    const opacity = 0.15 + Math.random() * 0.35;
+    const isFloating = Math.random() > 0.6;
+
+    return {
+      id: index,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      duration: 6 + Math.random() * 8, // 6-14s
+      delay: Math.random() * 4, // 0-4s delay
+      size,
+      opacity,
+      color,
+      shadow: `0 0 ${size * 0.6}px ${size * 0.3}px ${color}`,
+      animationClass: isFloating ? 'animate-spot-float' : 'animate-spot-pulse',
+    };
+  });
 }
