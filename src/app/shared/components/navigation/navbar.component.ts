@@ -25,11 +25,11 @@ import { UtilsService } from '../../services/utils.service';
             (keydown.space)="navigateToSection(item)"
           >
             @if (item.icon) {
-              <span class="material-icons">{{ item.icon }}</span>
+              <span class="material-icons-outlined text-sm">{{ item.icon }}</span>
             }
             <span>{{ item.label }}</span>
             @if (item.items) {
-              <span class="material-icons ml-auto">{{
+              <span class="material-icons-outlined ml-auto text-sm">{{
                 root ? 'expand_more' : 'chevron_right'
               }}</span>
             }
@@ -47,7 +47,7 @@ import { UtilsService } from '../../services/utils.service';
             >
               <ng-template #content>
                 <div class="flex flex-row items-center justify-center justify-items-center">
-                  <span class="material-icons mr-2">smart_toy</span>
+                  <span class="material-icons-outlined mr-2 text-sm">smart_toy</span>
                   <span class="text-sm lg:text-base">Prompt</span>
                 </div>
               </ng-template>
