@@ -13,16 +13,6 @@
     "prettier:check": "prettier . --check --config .prettierrc",
     "prepare": "husky"
   },
-  "prettier": {
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
-  },
   "private": true,
   "dependencies": {
     "@angular/common": "^20.0.0",
