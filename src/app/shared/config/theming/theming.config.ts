@@ -89,3 +89,5 @@ export const AppThemePreset = definePreset(Aura, {
     }
   }
 });
+
+export const DarkModeSelector = 'portfolio-dark';

@@ -13,7 +13,7 @@ import { UtilsService } from '../../services/utils.service';
   selector: 'app-navbar',
   imports: [ThemeSelectorComponent, Menubar, Ripple, SplitButton],
   template: `
-    <div class="w-screen min-h-20 flex flex-row justify-center">
+    <nav class="w-screen min-h-20 flex flex-row justify-center">
       <p-menubar [model]="NavigationItems" class="rounded-full  min-w-62 m-2">
         <ng-template #item let-item let-root="root" class="rounded-full">
           <a
@@ -56,7 +56,7 @@ import { UtilsService } from '../../services/utils.service';
           </div>
         </ng-template>
       </p-menubar>
-    </div>
+    </nav>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, effect, signal } from '@angular/cor
 import { AppTheme } from '../../types/theming/theming.types';
 import { Button } from 'primeng/button';
 import { Ripple } from 'primeng/ripple';
+import { DarkModeSelector } from '../../config/theming/theming.config';
 
 @Component({
   selector: 'app-theme-selector',
@@ -63,7 +64,7 @@ export class ThemeSelectorComponent {
   }
 
   private setBodyThemeClass(theme: AppTheme) {
-    const darkClass = 'portfolio-dark';
+    const darkClass = DarkModeSelector;
     const html = document.querySelector('html');
     if (!html) return;
 

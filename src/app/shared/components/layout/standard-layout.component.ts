@@ -13,11 +13,15 @@ import { ScrollTop } from 'primeng/scrolltop';
         class="p-6 pb-1 lg:p-10 lg:pt-10 lg:pb-10 w-full h-full gap-2 overflow-x-hidden layout-scrollbar scroll-hide-auto"
       >
         <ng-content select="[content]"></ng-content>
-        <p-scrolltop target="parent" [threshold]="100">
+        <p-scroll-top
+          target="parent"
+          [threshold]="100"
+          [buttonProps]="{ rounded: true, outlined: true }"
+        >
           <ng-template #icon>
             <span class="material-icons-outlined">keyboard_arrow_up</span>
           </ng-template>
-        </p-scrolltop>
+        </p-scroll-top>
       </div>
     </div>
   `,

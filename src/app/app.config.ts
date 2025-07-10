@@ -14,7 +14,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { providePrimeNG } from 'primeng/config';
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
-import { AppThemePreset } from './shared/config/theming/theming.config';
+import { AppThemePreset, DarkModeSelector } from './shared/config/theming/theming.config';
 import { MessageService } from 'primeng/api';
 
 export const appConfig: ApplicationConfig = {
@@ -26,7 +26,7 @@ export const appConfig: ApplicationConfig = {
       theme: {
         preset: AppThemePreset,
         options: {
-          darkModeSelector: '.portfolio-dark',
+          darkModeSelector: `.${DarkModeSelector}`,
           cssLayer: {
             name: 'primeng',
             order: 'theme, base, primeng'
