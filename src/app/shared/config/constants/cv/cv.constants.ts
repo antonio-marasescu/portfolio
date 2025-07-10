@@ -216,6 +216,16 @@ const CvProjects: Projects = {
   id: StandardCvSection.Projects,
   projects: [
     {
+      id: 'codex',
+      title: 'Codex',
+      period: '2025',
+      content: `A personal blog and research notes app designed for clearer presentation, easier access, and seamless sharing, built using Analog and Angular`,
+      category: 'Personal',
+      isGithub: true,
+      url: 'https://github.com/antonio-marasescu/codex',
+      tags: ['CDK', 'AWS Services', 'Angular', 'Analog', 'TypeScript', 'Tailwind', 'HTML', 'CSS']
+    },
+    {
       id: 'allianz',
       title: 'Allianz Insurance Projects',
       period: '2025',
@@ -249,9 +259,34 @@ const CvProjects: Projects = {
         'TypeScript',
         'Sass',
         'Ngrx',
+        'Tailwind',
         'Nx',
         'HTML',
         'CSS'
+      ]
+    },
+
+    {
+      id: 'sanctumlab',
+      title: 'Sanctum Lab',
+      period: '2024',
+      content: `A flexible homelab software suite for streamlined home content management, designed as a serverless application with the option to run locally or in a Docker container. Primarily intended to explore a template architecture for serverless projects on AWS`,
+      category: 'Personal',
+      isGithub: true,
+      url: 'https://github.com/antonio-marasescu/sanctumlab',
+      tags: [
+        'CDK',
+        'AWS Services',
+        'AWS Lambda',
+        'DynamoDB',
+        'Angular',
+        'NgRx',
+        'TypeScript',
+        'Tailwind',
+        'HTML',
+        'SCSS',
+        'Zod',
+        'Docker'
       ]
     },
     {

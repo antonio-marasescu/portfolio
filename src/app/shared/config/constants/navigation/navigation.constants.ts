@@ -44,3 +44,5 @@ export const NavigationItems: NavbarItem[] = [
     icon: 'check_circle'
   }
 ];
+
+export const CodexAppRoute = 'https://codex.antoniomarasescuduran.com/';

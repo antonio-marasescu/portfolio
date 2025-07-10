@@ -14,3 +14,9 @@ export enum NavigationItemType {
 export type NavbarItem = {
   id: string;
 } & MenuItem;
+
+export type PopoverItem = {
+  id: string;
+  label: string;
+  command: () => void;
+};
