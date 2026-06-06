@@ -2,6 +2,7 @@ export enum AvailableSkill {
   TypeScript = 'TypeScript',
   JavaScript = 'JavaScript',
   Java = 'Java',
+  Python = 'Python',
   Solidity = 'Solidity',
   Angular = 'Angular',
   React = 'React',
@@ -18,6 +19,8 @@ export enum AvailableSkill {
   AwsLambda = 'AwsLambda',
   ExpressJs = 'ExpressJs',
   NestJs = 'NestJs',
+  Flask = 'Flask',
+  SqlAlchemy = 'SqlAlchemy',
   GraphQl = 'GraphQl',
   PostgreSQL = 'PostgreSQL',
   Sql = 'Sql',
@@ -36,8 +39,11 @@ export enum AvailableSkill {
   Esbuild = 'Esbuild',
   Ethereum = 'Ethereum',
   LLM = 'LLM',
-  OpenAI = 'OpenAI',
-  LangChain = 'LangChain'
+  OpenAiApi = 'OpenAiApi',
+  LangChain = 'LangChain',
+  ClaudeCode = 'ClaudeCode',
+  CodexCli = 'CodexCli',
+  CopilotCli = 'CopilotCli'
 }
 
 export enum AvailableSkillCategory {

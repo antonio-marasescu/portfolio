@@ -22,6 +22,13 @@ export const CvAvailableSkills: Record<AvailableSkill, Skill> = {
     level: 'Intermediate',
     experience: 5
   },
+  [AvailableSkill.Python]: {
+    id: AvailableSkill.Python,
+    label: 'Python',
+    imageUrl: 'technologies/languages/python.webp',
+    level: 'Intermediate',
+    experience: 3
+  },
   [AvailableSkill.Solidity]: {
     id: AvailableSkill.Solidity,
     label: 'Solidity',
@@ -133,6 +140,20 @@ export const CvAvailableSkills: Record<AvailableSkill, Skill> = {
     imageUrl: 'technologies/backend/nestjs.webp',
     level: 'Expert',
     experience: 4
+  },
+  [AvailableSkill.Flask]: {
+    id: AvailableSkill.Flask,
+    label: 'Flask',
+    imageUrl: 'technologies/backend/flask.webp',
+    level: 'Beginner',
+    experience: 1
+  },
+  [AvailableSkill.SqlAlchemy]: {
+    id: AvailableSkill.SqlAlchemy,
+    label: 'SQLAlchemy',
+    imageUrl: 'technologies/backend/sqlalchemy.webp',
+    level: 'Beginner',
+    experience: 1
   },
   [AvailableSkill.GraphQl]: {
     id: AvailableSkill.GraphQl,
@@ -260,9 +281,9 @@ export const CvAvailableSkills: Record<AvailableSkill, Skill> = {
     level: 'Intermediate',
     experience: 2
   },
-  [AvailableSkill.OpenAI]: {
-    id: AvailableSkill.OpenAI,
-    label: 'OpenAI',
+  [AvailableSkill.OpenAiApi]: {
+    id: AvailableSkill.OpenAiApi,
+    label: 'OpenAI API',
     imageUrl: 'technologies/miscellaneous/openai.webp',
     level: 'Intermediate',
     experience: 2
@@ -271,6 +292,27 @@ export const CvAvailableSkills: Record<AvailableSkill, Skill> = {
     id: AvailableSkill.LangChain,
     label: 'LangChain',
     imageUrl: 'technologies/miscellaneous/langchain.webp',
+    level: 'Intermediate',
+    experience: 2
+  },
+  [AvailableSkill.ClaudeCode]: {
+    id: AvailableSkill.ClaudeCode,
+    label: 'Claude Code',
+    imageUrl: 'technologies/ai/claude-code.webp',
+    level: 'Expert',
+    experience: 2
+  },
+  [AvailableSkill.CodexCli]: {
+    id: AvailableSkill.CodexCli,
+    label: 'Codex CLI',
+    imageUrl: 'technologies/ai/codex.webp',
+    level: 'Intermediate',
+    experience: 2
+  },
+  [AvailableSkill.CopilotCli]: {
+    id: AvailableSkill.CopilotCli,
+    label: 'Copilot CLI',
+    imageUrl: 'technologies/ai/copilot.webp',
     level: 'Intermediate',
     experience: 2
   }

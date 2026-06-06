@@ -62,6 +62,8 @@ const CvSkills: Skills = {
         CvAvailableSkills.NodeJS,
         CvAvailableSkills.ExpressJs,
         CvAvailableSkills.NestJs,
+        CvAvailableSkills.Flask,
+        CvAvailableSkills.SqlAlchemy,
         CvAvailableSkills.SpringBoot,
         CvAvailableSkills.AwsLambda,
         CvAvailableSkills.GraphQl,
@@ -89,13 +91,21 @@ const CvSkills: Skills = {
         CvAvailableSkills.TypeScript,
         CvAvailableSkills.JavaScript,
         CvAvailableSkills.Java,
+        CvAvailableSkills.Python,
         CvAvailableSkills.Solidity
       ]
     },
     {
       id: AvailableSkillCategory.AI,
       label: 'AI',
-      skills: [CvAvailableSkills.OpenAI, CvAvailableSkills.LangChain, CvAvailableSkills.LLM]
+      skills: [
+        CvAvailableSkills.OpenAiApi,
+        CvAvailableSkills.ClaudeCode,
+        CvAvailableSkills.CodexCli,
+        CvAvailableSkills.CopilotCli,
+        CvAvailableSkills.LangChain,
+        CvAvailableSkills.LLM
+      ]
     },
     {
       id: AvailableSkillCategory.Testing,
