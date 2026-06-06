@@ -1,7 +1,7 @@
 :root {
-  --p-primary-900: #ffffff;
-  --p-surface-700: #ffffff;
-  --p-surface-900: #ffffff;
+  --p-primary-900: #f59e0b;
+  --p-surface-700: #d97706;
+  --p-surface-900: #b45309;
 }
 
 .layout-scrollbar::-webkit-scrollbar {

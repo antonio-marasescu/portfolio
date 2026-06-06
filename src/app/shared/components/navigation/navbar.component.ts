@@ -45,12 +45,7 @@ import { Popover } from 'primeng/popover';
               <span class="material-icons-outlined">auto_stories</span>
               <span class="text-sm lg:text-base">Codex</span>
             </p-button>
-            <p-button
-              size="small"
-              outlined="true"
-              severity="info"
-              (onClick)="onPromptPopoverToggle($event)"
-            >
+            <p-button size="small" outlined="true" (onClick)="onPromptPopoverToggle($event)">
               <span class="material-icons-outlined">smart_toy</span>
               <span class="text-sm lg:text-base">Prompt</span>
             </p-button>

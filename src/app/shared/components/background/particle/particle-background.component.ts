@@ -31,14 +31,14 @@ import { NgStyle } from '@angular/common';
 export class ParticleBackgroundComponent {
   protected readonly glowingSpots = Array.from({ length: 8 }, (_, index) => {
     const colors = [
-      'oklch(0.7 0.2 240 / 0.25)', // blue - more vibrant
-      'oklch(0.65 0.25 280 / 0.25)', // purple - richer
-      'oklch(0.6 0.3 15 / 0.25)', // red - more saturated
-      'oklch(0.75 0.2 140 / 0.25)', // green - brighter
-      'oklch(0.7 0.25 45 / 0.25)', // orange - more vivid
-      'oklch(0.6 0.3 300 / 0.25)', // violet - deeper
-      'oklch(0.8 0.15 200 / 0.25)', // sky blue - lighter
-      'oklch(0.7 0.2 160 / 0.25)' // emerald - more natural
+      'oklch(0.75 0.15 70 / 0.25)', // gold - warm
+      'oklch(0.7 0.2 60 / 0.25)', // amber - rich
+      'oklch(0.65 0.18 80 / 0.25)', // yellow-gold - vibrant
+      'oklch(0.72 0.16 55 / 0.25)', // deep amber - darker
+      'oklch(0.78 0.14 75 / 0.25)', // light gold - bright
+      'oklch(0.68 0.19 65 / 0.25)', // burnt amber - intense
+      'oklch(0.76 0.13 85 / 0.25)', // pale gold - soft
+      'oklch(0.7 0.17 50 / 0.25)' // orange-amber - warm
     ];
 
     const color = colors[index % colors.length];

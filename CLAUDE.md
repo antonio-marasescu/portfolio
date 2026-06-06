@@ -51,6 +51,14 @@ pnpm prettier:write   # Auto-fix formatting
 - RxJS 7.8 (reactive programming)
 - Karma + Jasmine (testing)
 
+## Theming
+
+- **Dark theme**: Amber/gold accent colors (primary/secondary)
+- **Surfaces**: Neutral zinc (dark transparent backgrounds)
+- **Particle effects**: Warm amber/gold glowing spots
+- **Theme config**: `/src/app/shared/config/theming/theming.config.ts`
+- **Note**: Avoid customizing `info` severity colors in tags — the default blue provides better contrast. Keep amber/gold for primary/secondary accents only.
+
 ## Gotchas
 
 1. **PNPM required**: Don't use `npm` or `yarn` — this is a PNPM workspace
