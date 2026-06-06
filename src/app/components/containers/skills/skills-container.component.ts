@@ -40,7 +40,7 @@ export class SkillsContainerComponent {
   };
   protected readonly SkillLevelToSeverity: Record<SkillLevel, ThemeSeverity> = {
     Beginner: 'info',
-    Intermediate: 'primary',
+    Intermediate: 'secondary',
     Expert: 'success'
   };
   protected skillsFilterControl = new FormControl<AvailableSkillCategory>(

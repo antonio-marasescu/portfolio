@@ -3,12 +3,4 @@ export enum AppTheme {
   Dark = 'dark'
 }
 
-export type ThemeSeverity =
-  | string
-  | 'success'
-  | 'primary'
-  | 'secondary'
-  | 'info'
-  | 'warn'
-  | 'danger'
-  | 'contrast';
+export type ThemeSeverity = 'success' | 'secondary' | 'info' | 'warn' | 'danger' | 'contrast';
