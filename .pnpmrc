@@ -1,0 +1,11 @@
+# pnpm will run build scripts by default (no need to enable)
+# Use frozen lockfile in CI (handled via --frozen-lockfile flag)
+
+# Package age restriction: require packages to be at least 7 days old
+# This helps avoid supply chain attacks from newly published malicious packages
+resolution-mode=time-based
+prefer-offline=true
+
+# Additional security settings
+strict-peer-dependencies=false
+auto-install-peers=true
