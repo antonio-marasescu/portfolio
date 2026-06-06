@@ -1,6 +1,9 @@
+packages:
+  - '.'
+  - 'infra'
+
 minimumReleaseAgeStrict: true
-minimumReleaseAge: 10080 # 7 days in min
-trustPolicy: no-downgrade
+minimumReleaseAge: 1440 # 1 days in min
 strictDepBuilds: true
 allowBuilds:
   '@parcel/watcher': true
