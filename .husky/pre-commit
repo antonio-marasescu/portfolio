@@ -1,2 +1,2 @@
-npm run prettier:check
-npm run lint
+pnpm run prettier:check
+pnpm run lint
